@@ -13,5 +13,30 @@ namespace CitizenScience_UIPrototype
         {
 
         }
+        protected void ddlAdminAction_Change(object sender, EventArgs e)
+        {
+            string page = ddlAdminAction.SelectedValue;
+            switch (page)
+            {
+                case "addLocation":
+                    break;
+                case "uploadSensorData":
+                    break;
+                case "downloadSensorData":
+                    break;
+                case "manageAdmins":
+                    break;
+                case "editGallery":
+                    break;
+                case "editAbout":
+                    break;
+                case "":
+                    break;
+            }
+        }
+        protected void ddlSensorDownloadWatersheds_Change(object sender, EventArgs e)
+        {
+
+        }
     }
 }
