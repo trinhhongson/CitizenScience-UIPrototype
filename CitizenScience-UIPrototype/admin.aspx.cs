@@ -11,7 +11,12 @@ namespace CitizenScience_UIPrototype
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            divAddLocation.Visible = false;
+            divUploadSensorData.Visible = false;
+            divDownloadSensorData.Visible = false;
+            divManageAdmins.Visible = false;
+            divEditGallery.Visible = false;
+            divEditAbout.Visible = false;
         }
         protected void ddlAdminAction_Change(object sender, EventArgs e)
         {

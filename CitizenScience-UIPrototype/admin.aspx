@@ -22,7 +22,7 @@
         </div>
         <div class="row">
 <%-- ADD LOCATION DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divAddLocation">
+            <div class="col-md-6 col-md-offset-3" id="divAddLocation" runat="server">
                 <asp:Label AssociatedControlID="txtNewLocationName" runat="server">New Location Name:</asp:Label>
                 <asp:TextBox ID="txtNewLocationName" runat="server"/>
 
@@ -45,7 +45,7 @@
             </div>
 
 <%-- UPLOAD SENSOR DATA DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divUploadSensorData">
+            <div class="col-md-6 col-md-offset-3" id="divUploadSensorData" runat="server">
                 <asp:Label AssociatedControlID="fulUploadSensorData" runat="server">Sensor Data File:</asp:Label>
                 <asp:FileUpload ID="fulUploadSensorData" runat="server"/>
 
@@ -74,7 +74,7 @@
             </div>
 
 <%-- DOWNLOAD SENSOR DATA DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divDownloadSensorData">
+            <div class="col-md-6 col-md-offset-3" id="divDownloadSensorData" runat="server">
                 <asp:Button ID="btnDownloadAllSensorData" runat="server" text="Download All Data"></asp:Button>
                 <asp:Button ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data"></asp:Button>
 
@@ -98,7 +98,7 @@
             </div>
 
 <%-- MANAGE ADMINS DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divManageAdmins">
+            <div class="col-md-6 col-md-offset-3" id="divManageAdmins" runat="server">
                 <table>
                     <tr>
                         <th>Username</th>
@@ -151,7 +151,7 @@
             </div>
 
 <%-- EDIT GALLERY DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divEditGallery">
+            <div class="col-md-6 col-md-offset-3" id="divEditGallery" runat="server">
                 <asp:Button ID="txtAdminWatershedGallery" runat="server" text="Watersheds"/>
                 <asp:Button ID="txtAdminVolunteersGallery" runat="server" text="Volunteers"/>
 
@@ -248,7 +248,7 @@
             </div>
 
 <%-- EDIT ABOUT DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divEditAbout">
+            <div class="col-md-6 col-md-offset-3" id="divEditAbout" runat="server">
                 <asp:Button ID="btnAddAboutSection" runat="server" text="+ Add New Section"/>
 
                 <table>
