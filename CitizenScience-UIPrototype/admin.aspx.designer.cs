@@ -22,6 +22,15 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.DropDownList ddlAdminAction;
         
         /// <summary>
+        /// divAddLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAddLocation;
+        
+        /// <summary>
         /// txtNewLocationName control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.Button btnAddLocation;
         
         /// <summary>
+        /// divUploadSensorData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUploadSensorData;
+        
+        /// <summary>
         /// fulUploadSensorData control.
         /// </summary>
         /// <remarks>
@@ -121,6 +139,15 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.Button btnCancelSensorDataUpload;
         
         /// <summary>
+        /// divDownloadSensorData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDownloadSensorData;
+        
+        /// <summary>
         /// btnDownloadAllSensorData control.
         /// </summary>
         /// <remarks>
@@ -146,6 +173,15 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSensorDownloadWatersheds;
+        
+        /// <summary>
+        /// divManageAdmins control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divManageAdmins;
         
         /// <summary>
         /// btnCreateNewAdmin control.
@@ -227,6 +263,15 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelNewAdmin;
+        
+        /// <summary>
+        /// divEditGallery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEditGallery;
         
         /// <summary>
         /// txtAdminWatershedGallery control.
@@ -353,6 +398,15 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCloseEditGallery;
+        
+        /// <summary>
+        /// divEditAbout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEditAbout;
         
         /// <summary>
         /// btnAddAboutSection control.
