@@ -10,14 +10,25 @@
                 Select Watershed
             </button>
             <ul class="dropdown-menu">
-                <li class="dropdown-menu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 1</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Location 1</a></li>
-                        <li><a class="dropdown-item" href="#">Location 2</a></li>
-                        <li><a class="dropdown-item" href="#">Location 3</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 1</a>
+                    <ul>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 1</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 2</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 3</a></li>
                     </ul>
                 </li>
-                <li><a class="dropdown-item dropdown-toggle" href="#">Watershed 2<span class="caret"></span></a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 2</a>
+                    <ul>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 4</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 3</a>
+                    <ul>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 6</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 7</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 8</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
