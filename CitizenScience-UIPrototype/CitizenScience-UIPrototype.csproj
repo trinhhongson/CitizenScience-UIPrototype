@@ -73,6 +73,8 @@
     <Content Include="img\logo.jpg" />
     <Content Include="img\temple-logo.png" />
     <Content Include="map.aspx" />
+    <Content Include="mapAPI-style.css" />
+    <Content Include="template-style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
