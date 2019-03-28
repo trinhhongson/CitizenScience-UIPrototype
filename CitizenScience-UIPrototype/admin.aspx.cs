@@ -11,12 +11,15 @@ namespace CitizenScience_UIPrototype
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            divAddLocation.Visible = false;
-            divUploadSensorData.Visible = false;
-            divDownloadSensorData.Visible = false;
-            divManageAdmins.Visible = false;
-            divEditGallery.Visible = false;
-            divEditAbout.Visible = false;
+            if (!IsPostBack)
+            {
+                divAddLocation.Visible = false;
+                divUploadSensorData.Visible = false;
+                divDownloadSensorData.Visible = false;
+                divManageAdmins.Visible = false;
+                divEditGallery.Visible = false;
+                divEditAbout.Visible = false;                
+            }
         }
 
 //      FUNCTION TO CHANGE DISPLAYED ADMIN PAGE
@@ -108,8 +111,7 @@ namespace CitizenScience_UIPrototype
         
         protected void btnAddLocation_Click(object sender, EventArgs e)
         {
-            //ddlAdminAction.Style["background-color"] = "blue";
-            Response.Write("HELLO");
+            
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////      DOWNLOAD WATERSHED DATA FUNCTIONS
@@ -132,7 +134,7 @@ namespace CitizenScience_UIPrototype
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////      MANAGE ADMINS FUNCTIONS        
-        protected void btnCreateNewAdmin_Click(object sender, EventArgs e)
+        protected void btnAddNewAdmin_Click(object sender, EventArgs e)
         {
             divNewAdmin.Visible = true;
         }
@@ -147,13 +149,19 @@ namespace CitizenScience_UIPrototype
         {
             divEditAlbum.Visible = true;
         }
-        protected void btnCreateAlbum_Click(object sender, EventArgs e)
+        //  Open New Album Form
+        protected void btnAddAlbum_Click(object sender, EventArgs e)
         {
             divAddNewAlbum.Visible = true;
         }
+        //  Submit New Album Form
+        protected void btnCreateAlbum_Click(object sender, EventArgs e)
+        {
+            divAddNewAlbum.Visible = false;
+        }
         protected void btnCloseEditGallery_Click(object sender, EventArgs e)
         {
-
+            divEditAlbum.Visible = false;
         }
 
 
