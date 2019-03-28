@@ -265,7 +265,6 @@
 <%-- EDIT ABOUT DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divEditAbout" runat="server">
                 <asp:Button CssClass="btn btn-primary" ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click" UseSubmitBehavior="false"/>
-
                 <table>
                     <tr>
                         <th>Section Name</th>
