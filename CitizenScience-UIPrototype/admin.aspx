@@ -1,13 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CitizenScience.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="CitizenScience_UIPrototype.admin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CitizenScience.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="CitizenScience_UIPrototype.admin" ClientIDMode="Static" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="titleName" runat="server">
     Admin   |   Citizen Science
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main_content" runat="server">
+
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="text-align:center; margin:auto">
 <%-- ADMIN ACTION DIV --%>
-            <div class="col-md-2 col-md-offset-5" id="divAdminAction">
+            <div class="col-md-2 col-md-offset-5" id="divAdminAction" style="text-align:center; margin:auto">
                 <h1>Admin Action</h1>
                 <asp:DropDownList ID="ddlAdminAction" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlAdminAction_Change">
                     <asp:ListItem Value="">Select an Action...</asp:ListItem>
@@ -20,6 +21,7 @@
                 </asp:DropDownList>
             </div>
         </div>
+        <br />
         <div class="row">
 <%-- ADD LOCATION DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divAddLocation" runat="server">
@@ -41,7 +43,7 @@
                 <asp:Label AssociatedControlID="txtNewLocationDescription" runat="server">Location Description:</asp:Label>
                 <asp:TextBox TextMode="MultiLine" ID="txtNewLocationDescription" runat="server"/>
 
-                <asp:Button ID="btnAddLocation" runat="server" text="Add Location"></asp:Button>
+                <asp:Button ID="btnAddLocation" runat="server" text="Add Location" OnClick="btnAddLocation_Click" />
             </div>
 
 <%-- UPLOAD SENSOR DATA DIV --%>
@@ -49,9 +51,9 @@
                 <asp:Label AssociatedControlID="fulUploadSensorData" runat="server">Sensor Data File:</asp:Label>
                 <asp:FileUpload ID="fulUploadSensorData" runat="server"/>
 
-                <asp:Button ID="btnUploadSensorData" runat="server" text="Upload Data"></asp:Button>
+                <asp:Button ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" />
 
-                <div id="divUploadError">
+                <div id="divUploadError" runat="server">
                     <h2>Upload Error</h2>
                     <h3>The following errors were found in your upload</h3>
                     <table>
@@ -68,15 +70,15 @@
                             <td>I don't know why this isn't working, but we better fix it soon because Mom's gonna be back any minute and she's gonna be so mad if she sees it's broken.</td>
                         </tr>
                     </table>
-                    <asp:Button ID="btnUploadCorrectFiles" runat="server" text="Upload Passing Files"></asp:Button>
-                    <asp:Button ID="btnCancelSensorDataUpload" runat="server" text="Cancel Upload"></asp:Button>
+                    <asp:Button ID="btnUploadCorrectFiles" runat="server" text="Upload Passing Files" OnClick="HideUploadError"/>
+                    <asp:Button ID="btnCancelSensorDataUpload" runat="server" text="Cancel Upload" OnClick="HideUploadError"/>
                 </div>
             </div>
 
 <%-- DOWNLOAD SENSOR DATA DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divDownloadSensorData" runat="server">
-                <asp:Button ID="btnDownloadAllSensorData" runat="server" text="Download All Data"></asp:Button>
-                <asp:Button ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data"></asp:Button>
+                <asp:Button ID="btnDownloadAllSensorData" runat="server" text="Download All Data" />
+                <asp:Button ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data" />
 
                 <div id="divSelectSensorDownload">
                     <asp:Label AssociatedControlID="ddlSensorDownloadWatersheds" runat="server">Specify a Watershed:</asp:Label>
@@ -121,9 +123,9 @@
                         <td><asp:Button runat="server" Text="Delete"/></td>
                     </tr>
                 </table>
-                <asp:Button ID="btnCreateNewAdmin" runat="server" text="+ Add New Admin"/>
+                <asp:Button ID="btnCreateNewAdmin" runat="server" text="+ Add New Admin" OnClick="btnCreateNewAdmin_Click"/>
 
-                <div id="divNewAdmin">
+                <div id="divNewAdmin" runat="server">
                     <h2>Add New Admin</h2>
 
                     <asp:Label AssociatedControlID="txtNewAdminUsername" runat="server">Username:</asp:Label>
@@ -145,8 +147,8 @@
                     <asp:TextBox ID="txtNewAdminEmail" runat="server"/>
 
 
-                    <asp:Button ID="btnAddNewAdmin" runat="server" text="Create Admin"/>
-                    <asp:Button ID="btnCancelNewAdmin" runat="server" text="Cancel"/>
+                    <asp:Button ID="btnAddNewAdmin" runat="server" text="Create Admin" OnClick="HideNewAdmin"/>
+                    <asp:Button ID="btnCancelNewAdmin" runat="server" text="Cancel" OnClick="HideNewAdmin"/>
                 </div>
             </div>
 
@@ -165,42 +167,42 @@
                         <td>Album1</td>
                         <td>This is an album with pictures</td>
                         <td>Volunteer</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album2</td>
                         <td>Another album with other pictures</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album3</td>
                         <td>A third album with even more pictures</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album4</td>
                         <td>This album has pictures just like the other ones, same old, same old</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album5</td>
                         <td>This is the last album included here, but hopefully there will be more to come</td>
                         <td>Volunteer</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td> 
                     </tr>
                 </table>
 
-                <asp:Button ID="btnCreateAlbum" runat="server" text="+ Add New Album"/>
+                <asp:Button ID="btnCreateAlbum" runat="server" text="+ Add New Album" OnClick="btnCreateAlbum_Click"/>
 
-                <div id="divAddNewAlbum">
+                <div id="divAddNewAlbum" runat="server">
                     <h2>Add New Album</h2>
                     <asp:Label AssociatedControlID="txtAlbumName" runat="server">Album Name:</asp:Label>
                     <asp:TextBox ID="txtAlbumName" runat="server"/>
@@ -218,7 +220,7 @@
                     <asp:Button ID="btnCancelAlbum" runat="server" text="Cancel"/>
                 </div>
 
-                <div id="divEditAlbum">
+                <div id="divEditAlbum" runat="server">
                     <h2>Edit Album</h2>
                     <asp:Label AssociatedControlID="fulNewAlbumImage" runat="server">Add New Image:</asp:Label>
                     <asp:FileUpload ID="fulNewAlbumImage" runat="server"/>
@@ -243,41 +245,40 @@
 
                     <asp:Button ID="btnMoveGalleryImage" runat="server" text="Move Selected"/>
 
-                    <asp:Button ID="btnCloseEditGallery" runat="server" text="Move Selected"/>
+                    <asp:Button ID="btnCloseEditGallery" runat="server" text="Close Gallery" OnClick="btnCloseEditGallery_Click"/>
                 </div>
             </div>
 
 <%-- EDIT ABOUT DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divEditAbout" runat="server">
-                <asp:Button ID="btnAddAboutSection" runat="server" text="+ Add New Section"/>
-
+                <asp:Button ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click"/>
                 <table>
                     <tr>
                         <th>Section Name</th>
                     </tr>
                     <tr>
                         <td>About Citizen Science</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td>                        
                     </tr>
                     <tr>
                         <td>Common Questions</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td>  
                     </tr>
                     <tr>
                         <td>Volunteer Form</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td>  
                     </tr>
                     <tr>
                         <td>Program Lead</td>
-                        <td><asp:Button runat="server" text="Edit"/></td>
+                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
                         <td><asp:Button runat="server" text="Delete"/></td>  
                     </tr>
                 </table>
 
-                <div id="divEditAboutSection">
+                <div id="divEditAboutSection" runat="server">
                     <h2>Edit About Section</h2>
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
                     <asp:TextBox ID="txtEditSectionName" runat="server"/>
@@ -285,20 +286,20 @@
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
                     <asp:TextBox ID="txtEditSectionInformation" runat="server"/>
 
-                    <asp:Button ID="Button1" runat="server" text="Update Section"/>
-                    <asp:Button ID="Button2" runat="server" text="Cancel Updates"/>
+                    <asp:Button ID="btnUpdateAboutSection" runat="server" text="Update Section" OnClick="HideEditAboutSection"/>
+                    <asp:Button ID="btnCancelUpdateAboutSection" runat="server" text="Cancel Updates" OnClick="HideEditAboutSection"/>
                 </div>
 
-                <div id="divAddAboutSection">
+                <div id="divAddAboutSection" runat="server">
                     <h2>Add New About Section</h2>
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server"/>
+                    <asp:TextBox ID="txtAboutSectionName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
-                    <asp:TextBox ID="TextBox2" runat="server"/>
+                    <asp:TextBox ID="txtAboutSectionContent" runat="server"/>
 
-                    <asp:Button ID="Button3" runat="server" text="Add Section"/>
-                    <asp:Button ID="Button4" runat="server" text="Cancel"/>
+                    <asp:Button ID="btnConfirmAboutSectionAdd" runat="server" text="Add Section" OnClick="HideAddAboutSection"/>
+                    <asp:Button ID="btnCancelAboutSectionAdd" runat="server" text="Cancel" OnClick="HideAddAboutSection"/>
                 </div>
             </div>
         </div>
