@@ -43,7 +43,7 @@
                 <asp:Label AssociatedControlID="txtNewLocationDescription" runat="server">Location Description:</asp:Label>
                 <asp:TextBox TextMode="MultiLine" ID="txtNewLocationDescription" runat="server"/>
 
-                <asp:Button ID="btnAddLocation" runat="server" text="Add Location" OnClick="btnAddLocation_Click" />
+                <asp:Button CssClass="btn btn-primary" ID="btnAddLocation" runat="server" text="Add Location" OnClick="btnAddLocation_Click" UseSubmitBehavior="false" />
             </div>
 
 <%-- UPLOAD SENSOR DATA DIV --%>
@@ -51,7 +51,7 @@
                 <asp:Label AssociatedControlID="fulUploadSensorData" runat="server">Sensor Data File:</asp:Label>
                 <asp:FileUpload ID="fulUploadSensorData" runat="server"/>
 
-                <asp:Button ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" />
+                <asp:Button CssClass="btn btn-primary" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
 
                 <div id="divUploadError" runat="server">
                     <h2>Upload Error</h2>
@@ -70,15 +70,15 @@
                             <td>I don't know why this isn't working, but we better fix it soon because Mom's gonna be back any minute and she's gonna be so mad if she sees it's broken.</td>
                         </tr>
                     </table>
-                    <asp:Button ID="btnUploadCorrectFiles" runat="server" text="Upload Passing Files" OnClick="HideUploadError"/>
-                    <asp:Button ID="btnCancelSensorDataUpload" runat="server" text="Cancel Upload" OnClick="HideUploadError"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnUploadCorrectFiles" runat="server" text="Upload Passing Files" OnClick="HideUploadError" UseSubmitBehavior="false"/>
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCancelSensorDataUpload" runat="server" text="Cancel Upload" OnClick="HideUploadError" UseSubmitBehavior="false"/>
                 </div>
             </div>
 
 <%-- DOWNLOAD SENSOR DATA DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divDownloadSensorData" runat="server">
-                <asp:Button ID="btnDownloadAllSensorData" runat="server" text="Download All Data" />
-                <asp:Button ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data" />
+                <asp:Button CssClass="btn btn-primary" ID="btnDownloadAllSensorData" runat="server" text="Download All Data" />
+                <asp:Button CssClass="btn btn-primary" ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data" />
 
                 <div id="divSelectSensorDownload">
                     <asp:Label AssociatedControlID="ddlSensorDownloadWatersheds" runat="server">Specify a Watershed:</asp:Label>
@@ -123,7 +123,7 @@
                         <td><asp:Button runat="server" Text="Delete"/></td>
                     </tr>
                 </table>
-                <asp:Button ID="btnCreateNewAdmin" runat="server" text="+ Add New Admin" OnClick="btnCreateNewAdmin_Click"/>
+                <asp:Button CssClass="btn btn-primary" ID="btnAddNewAdmin" runat="server" text="+ Add New Admin" OnClick="btnAddNewAdmin_Click" UseSubmitBehavior="false"/>
 
                 <div id="divNewAdmin" runat="server">
                     <h2>Add New Admin</h2>
@@ -147,15 +147,17 @@
                     <asp:TextBox ID="txtNewAdminEmail" runat="server"/>
 
 
-                    <asp:Button ID="btnAddNewAdmin" runat="server" text="Create Admin" OnClick="HideNewAdmin"/>
-                    <asp:Button ID="btnCancelNewAdmin" runat="server" text="Cancel" OnClick="HideNewAdmin"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnCreateNewAdmin" runat="server" text="Create Admin" OnClick="HideNewAdmin" UseSubmitBehavior="false"/>
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCancelNewAdmin" runat="server" text="Cancel" OnClick="HideNewAdmin" UseSubmitBehavior="false"/>
                 </div>
             </div>
 
 <%-- EDIT GALLERY DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divEditGallery" runat="server">
-                <asp:Button ID="txtAdminWatershedGallery" runat="server" text="Watersheds"/>
-                <asp:Button ID="txtAdminVolunteersGallery" runat="server" text="Volunteers"/>
+                <div class="btn-group" role="group">
+                    <asp:Button CssClass="btn btn-primary" ID="txtAdminWatershedGallery" runat="server" text="Watersheds"/>
+                    <asp:Button CssClass="btn btn-primary" ID="txtAdminVolunteersGallery" runat="server" text="Volunteers"/>
+                </div>
 
                 <table>
                     <tr>
@@ -167,40 +169,40 @@
                         <td>Album1</td>
                         <td>This is an album with pictures</td>
                         <td>Volunteer</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td> 
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album2</td>
                         <td>Another album with other pictures</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td> 
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album3</td>
                         <td>A third album with even more pictures</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td> 
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album4</td>
                         <td>This album has pictures just like the other ones, same old, same old</td>
                         <td>Watershed</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td> 
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                     </tr>
                     <tr>
                         <td>Album5</td>
                         <td>This is the last album included here, but hopefully there will be more to come</td>
                         <td>Volunteer</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAlbum_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td> 
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                     </tr>
                 </table>
 
-                <asp:Button ID="btnCreateAlbum" runat="server" text="+ Add New Album" OnClick="btnCreateAlbum_Click"/>
+                <asp:Button CssClass="btn btn-primary" ID="btnAddAlbum" runat="server" text="+ Add New Album" OnClick="btnAddAlbum_Click" UseSubmitBehavior="false"/>
 
                 <div id="divAddNewAlbum" runat="server">
                     <h2>Add New Album</h2>
@@ -216,8 +218,8 @@
                         <asp:ListItem>Volunteer</asp:ListItem>
                     </asp:DropDownList>
 
-                    <asp:Button ID="btnAddAlbum" runat="server" text="Add Album"/>
-                    <asp:Button ID="btnCancelAlbum" runat="server" text="Cancel"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnCreateAlbum" runat="server" text="Create Album" UseSubmitBehavior="false" OnClick="btnCreateAlbum_Click" />
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCancelAlbum" runat="server" text="Cancel" UseSubmitBehavior="false" OnClick="btnCreateAlbum_Click"/>
                 </div>
 
                 <div id="divEditAlbum" runat="server">
@@ -225,13 +227,22 @@
                     <asp:Label AssociatedControlID="fulNewAlbumImage" runat="server">Add New Image:</asp:Label>
                     <asp:FileUpload ID="fulNewAlbumImage" runat="server"/>
 
-                    <asp:Button ID="btnUploadAlbumImage" runat="server" text="Upload Image"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnUploadAlbumImage" runat="server" text="Upload Image" UseSubmitBehavior="false"/>
 
                     <div id="divSelectEditGallery">
-
+                        <div>
+                            <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>
+                            <asp:CheckBox runat="server" />
+                        </div>
+                        <div>
+                            <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>
+                            <asp:CheckBox runat="server" />
+                        </div>
+                        <div>
+                            <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>
+                            <asp:CheckBox runat="server" />
+                        </div>
                     </div>
-
-                    <asp:Button ID="btnDeleteSelectedGalleryImage" runat="server" text="Delete Selected"/>
 
                     <asp:Label AssociatedControlID="ddlMoveGalleryImage" runat="server">Move Selected:</asp:Label>
                     <asp:DropDownList ID="ddlMoveGalleryImage" runat="server">
@@ -243,38 +254,40 @@
                         <asp:ListItem>Album5</asp:ListItem>
                     </asp:DropDownList>
 
-                    <asp:Button ID="btnMoveGalleryImage" runat="server" text="Move Selected"/>
+                    <asp:Button CssClass="btn btn-secondary" ID="btnMoveGalleryImage" runat="server" text="Move Selected"/>
 
-                    <asp:Button ID="btnCloseEditGallery" runat="server" text="Close Gallery" OnClick="btnCloseEditGallery_Click"/>
+                    <asp:Button CssClass="btn btn-danger" ID="btnDeleteSelectedGalleryImage" runat="server" text="Delete Selected" />
+                    
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCloseEditGallery" runat="server" text="Back to Gallery" OnClick="btnCloseEditGallery_Click" UseSubmitBehavior="false"/>
                 </div>
             </div>
 
 <%-- EDIT ABOUT DIV --%>
             <div class="col-md-6 col-md-offset-3" id="divEditAbout" runat="server">
-                <asp:Button ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click"/>
+                <asp:Button CssClass="btn btn-primary" ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click" UseSubmitBehavior="false"/>
                 <table>
                     <tr>
                         <th>Section Name</th>
                     </tr>
                     <tr>
                         <td>About Citizen Science</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td>                        
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>                        
                     </tr>
                     <tr>
                         <td>Common Questions</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td>  
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
                     </tr>
                     <tr>
                         <td>Volunteer Form</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td>  
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
                     </tr>
                     <tr>
                         <td>Program Lead</td>
-                        <td><asp:Button runat="server" text="Edit" OnClick="btnEditAboutSection_Click"/></td>
-                        <td><asp:Button runat="server" text="Delete"/></td>  
+                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
+                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
                     </tr>
                 </table>
 
@@ -286,8 +299,8 @@
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
                     <asp:TextBox ID="txtEditSectionInformation" runat="server"/>
 
-                    <asp:Button ID="btnUpdateAboutSection" runat="server" text="Update Section" OnClick="HideEditAboutSection"/>
-                    <asp:Button ID="btnCancelUpdateAboutSection" runat="server" text="Cancel Updates" OnClick="HideEditAboutSection"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnUpdateAboutSection" runat="server" text="Update Section" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCancelUpdateAboutSection" runat="server" text="Cancel Updates" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
                 </div>
 
                 <div id="divAddAboutSection" runat="server">
@@ -298,8 +311,8 @@
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
                     <asp:TextBox ID="txtAboutSectionContent" runat="server"/>
 
-                    <asp:Button ID="btnConfirmAboutSectionAdd" runat="server" text="Add Section" OnClick="HideAddAboutSection"/>
-                    <asp:Button ID="btnCancelAboutSectionAdd" runat="server" text="Cancel" OnClick="HideAddAboutSection"/>
+                    <asp:Button CssClass="btn btn-primary" ID="btnConfirmAboutSectionAdd" runat="server" text="Add Section" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
+                    <asp:Button CssClass="btn btn-secondary" ID="btnCancelAboutSectionAdd" runat="server" text="Cancel" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
                 </div>
             </div>
         </div>
