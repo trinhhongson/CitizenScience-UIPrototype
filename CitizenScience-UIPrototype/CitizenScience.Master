@@ -49,7 +49,7 @@
                                                 <input type="password" id="passwordInput" placeholder="Password" class="form-control form-control-sm" size="75" required="" />
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                                <asp:Button runat="server" ID="btnLogin" class="btn btn-primary btn-block" Text="Login"  OnClick="btnLogin_Click" />
                                             </div>
                                             <div class="form-group">
                                                 <a href="#">Forgot Password?</a>
