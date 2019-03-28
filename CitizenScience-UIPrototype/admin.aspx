@@ -10,7 +10,7 @@
 <%-- ADMIN ACTION DIV --%>
             <div class="col-md-2 col-md-offset-5" id="divAdminAction" style="text-align:center; margin:auto">
                 <h1>Admin Action</h1>
-                <asp:DropDownList ID="ddlAdminAction" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlAdminAction_Change">
+                <asp:DropDownList CssClass="form-control" ID="ddlAdminAction" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlAdminAction_Change">
                     <asp:ListItem Value="">Select an Action...</asp:ListItem>
                     <asp:ListItem Value="addLocation">Add Location</asp:ListItem>
                     <asp:ListItem Value="uploadSensorData">Upload Sensor Data</asp:ListItem>
@@ -24,43 +24,45 @@
         <br />
         <div class="row">
 <%-- ADD LOCATION DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divAddLocation" runat="server">
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divAddLocation" runat="server">
                 <asp:Label AssociatedControlID="txtNewLocationName" runat="server">New Location Name:</asp:Label>
-                <asp:TextBox ID="txtNewLocationName" runat="server"/>
+                <asp:TextBox CssClass="form-control" ID="txtNewLocationName" runat="server"/>
 
                 <asp:Label AssociatedControlID="txtNewLocationSerialNumber" runat="server">Sensor Serial Number:</asp:Label>
-                <asp:TextBox ID="txtNewLocationSerialNumber" runat="server"/>
+                <asp:TextBox CssClass="form-control" ID="txtNewLocationSerialNumber" runat="server"/>
 
                 <asp:Label AssociatedControlID="txtNewLocationLongitude" runat="server">Sensor Longitude:</asp:Label>
-                <asp:TextBox ID="txtNewLocationLongitude" runat="server"/>
+                <asp:TextBox CssClass="form-control" ID="txtNewLocationLongitude" runat="server"/>
 
                 <asp:Label AssociatedControlID="txtNewLocationLatitude" runat="server">Sensor Latitude:</asp:Label>
-                <asp:TextBox ID="txtNewLocationLatitude" runat="server"/>
+                <asp:TextBox CssClass="form-control" ID="txtNewLocationLatitude" runat="server"/>
 
                 <asp:Label AssociatedControlID="fulNewLocationProfileImage" runat="server">Location Profile Image:</asp:Label>
                 <asp:FileUpload ID="fulNewLocationProfileImage" runat="server"/>
 
                 <asp:Label AssociatedControlID="txtNewLocationDescription" runat="server">Location Description:</asp:Label>
-                <asp:TextBox TextMode="MultiLine" ID="txtNewLocationDescription" runat="server"/>
+                <asp:TextBox CssClass="form-control" TextMode="MultiLine" ID="txtNewLocationDescription" runat="server"/>
 
                 <asp:Button CssClass="btn btn-primary" ID="btnAddLocation" runat="server" text="Add Location" OnClick="btnAddLocation_Click" UseSubmitBehavior="false" />
             </div>
 
 <%-- UPLOAD SENSOR DATA DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divUploadSensorData" runat="server">
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divUploadSensorData" runat="server">
                 <asp:Label AssociatedControlID="fulUploadSensorData" runat="server">Sensor Data File:</asp:Label>
                 <asp:FileUpload ID="fulUploadSensorData" runat="server"/>
 
                 <asp:Button CssClass="btn btn-primary" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
 
-                <div id="divUploadError" runat="server">
+                <div id="divUploadError" class="AdminPopupDiv" runat="server">
                     <h2>Upload Error</h2>
                     <h3>The following errors were found in your upload</h3>
-                    <table>
-                        <tr>
-                            <th>File Name</th>
-                            <th>Error</th>
-                        </tr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">File Name</th>
+                                <th scope="col">Error</th>
+                            </tr>
+                        </thead>
                         <tr>
                             <td>ExampleFileError.dat</td>
                             <td>Looks like something didn't go right in this one spot right next to that other thing.</td>
@@ -76,20 +78,20 @@
             </div>
 
 <%-- DOWNLOAD SENSOR DATA DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divDownloadSensorData" runat="server">
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divDownloadSensorData" runat="server">
                 <asp:Button CssClass="btn btn-primary" ID="btnDownloadAllSensorData" runat="server" text="Download All Data" />
                 <asp:Button CssClass="btn btn-primary" ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data" />
 
                 <div id="divSelectSensorDownload">
                     <asp:Label AssociatedControlID="ddlSensorDownloadWatersheds" runat="server">Specify a Watershed:</asp:Label>
 
-                    <asp:DropDownList ID="ddlSensorDownloadWatersheds" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSensorDownloadWatersheds_Change">
+                    <asp:DropDownList CssClass="form-control" ID="ddlSensorDownloadWatersheds" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSensorDownloadWatersheds_Change">
                         <asp:ListItem Value="">Greater Philadelphia Watersheds...</asp:ListItem>
                         <asp:ListItem Value="w1">Watershed1</asp:ListItem>
                         <asp:ListItem Value="w2">Watershed2</asp:ListItem>
                         <asp:ListItem Value="w3">Watershed3</asp:ListItem>
                     </asp:DropDownList>
-                    <div>
+                    <div id="divLocationDownloadCheck" runat="server">
                         <asp:CheckBox runat="server" Text="Location1"/>
                         <asp:CheckBox runat="server" Text="Location2"/>
                         <asp:CheckBox runat="server" Text="Location3"/>
@@ -100,13 +102,13 @@
             </div>
 
 <%-- MANAGE ADMINS DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divManageAdmins" runat="server">
-                <table>
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divManageAdmins" runat="server">
+                <table class="table">
                     <tr>
-                        <th>Username</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
                     </tr>
                     <tr>
                         <td>CleverUsername123</td>
@@ -129,22 +131,22 @@
                     <h2>Add New Admin</h2>
 
                     <asp:Label AssociatedControlID="txtNewAdminUsername" runat="server">Username:</asp:Label>
-                    <asp:TextBox ID="txtNewAdminUsername" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtNewAdminUsername" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtNewAdminFirstName" runat="server">First Name:</asp:Label>
-                    <asp:TextBox ID="txtNewAdminFirstName" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtNewAdminFirstName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtNewAdminLastName" runat="server">Last Name:</asp:Label>
-                    <asp:TextBox ID="txtNewAdminLastName" runat="server"/>
+                    <asp:TextBox CssClass="form-control"  ID="txtNewAdminLastName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtNewAdminPassword" runat="server">Password:</asp:Label>
-                    <input id="txtNewAdminPassword" type="password" runat="server" />
+                    <input CssClass="form-control" id="txtNewAdminPassword" type="password" runat="server" />
 
                     <asp:Label AssociatedControlID="txtNewAdminPasswordReenter" runat="server">Re-enter Password:</asp:Label>
-                    <input id="txtNewAdminPasswordReenter" type="password" runat="server" />
+                    <input CssClass="form-control" id="txtNewAdminPasswordReenter" type="password" runat="server" />
 
-                    <asp:Label AssociatedControlID="txtNewAdminEmail" runat="server">Sensor Latitude:</asp:Label>
-                    <asp:TextBox ID="txtNewAdminEmail" runat="server"/>
+                    <asp:Label AssociatedControlID="txtNewAdminEmail" runat="server">Email:</asp:Label>
+                    <asp:TextBox CssClass="form-control" ID="txtNewAdminEmail" runat="server"/>
 
 
                     <asp:Button CssClass="btn btn-primary" ID="btnCreateNewAdmin" runat="server" text="Create Admin" OnClick="HideNewAdmin" UseSubmitBehavior="false"/>
@@ -153,17 +155,17 @@
             </div>
 
 <%-- EDIT GALLERY DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divEditGallery" runat="server">
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divEditGallery" runat="server">
                 <div class="btn-group" role="group">
                     <asp:Button CssClass="btn btn-primary" ID="txtAdminWatershedGallery" runat="server" text="Watersheds"/>
                     <asp:Button CssClass="btn btn-primary" ID="txtAdminVolunteersGallery" runat="server" text="Volunteers"/>
                 </div>
 
-                <table>
+                <table class="table">
                     <tr>
-                        <th>Album Name</th>
-                        <th>Description</th>
-                        <th>Group</th>
+                        <th scope="col">Album Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Group</th>
                     </tr>
                     <tr>
                         <td>Album1</td>
@@ -210,9 +212,9 @@
                     <asp:TextBox ID="txtAlbumName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtAlbumDescription" runat="server">Description:</asp:Label>
-                    <asp:TextBox ID="txtAlbumDescription" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtAlbumDescription" runat="server"/>
 
-                    <asp:DropDownList ID="ddlNewAlbumGroup" runat="server">
+                    <asp:DropDownList CssClass="form-control" ID="ddlNewAlbumGroup" runat="server">
                         <asp:ListItem>Select a Group...</asp:ListItem>
                         <asp:ListItem>Watershed</asp:ListItem>
                         <asp:ListItem>Volunteer</asp:ListItem>
@@ -245,7 +247,7 @@
                     </div>
 
                     <asp:Label AssociatedControlID="ddlMoveGalleryImage" runat="server">Move Selected:</asp:Label>
-                    <asp:DropDownList ID="ddlMoveGalleryImage" runat="server">
+                    <asp:DropDownList CssClass="form-control" ID="ddlMoveGalleryImage" runat="server">
                         <asp:ListItem>Destination...</asp:ListItem>
                         <asp:ListItem>Album1</asp:ListItem>
                         <asp:ListItem>Album2</asp:ListItem>
@@ -263,11 +265,11 @@
             </div>
 
 <%-- EDIT ABOUT DIV --%>
-            <div class="col-md-6 col-md-offset-3" id="divEditAbout" runat="server">
+            <div class="col-md-6 col-md-offset-3 AdminSectionDiv" id="divEditAbout" runat="server">
                 <asp:Button CssClass="btn btn-primary" ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click" UseSubmitBehavior="false"/>
-                <table>
+                <table class="table">
                     <tr>
-                        <th>Section Name</th>
+                        <th scope="col">Section Name</th>
                     </tr>
                     <tr>
                         <td>About Citizen Science</td>
@@ -294,10 +296,10 @@
                 <div id="divEditAboutSection" runat="server">
                     <h2>Edit About Section</h2>
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
-                    <asp:TextBox ID="txtEditSectionName" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtEditSectionName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
-                    <asp:TextBox ID="txtEditSectionInformation" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtEditSectionInformation" runat="server"/>
 
                     <asp:Button CssClass="btn btn-primary" ID="btnUpdateAboutSection" runat="server" text="Update Section" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
                     <asp:Button CssClass="btn btn-secondary" ID="btnCancelUpdateAboutSection" runat="server" text="Cancel Updates" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
@@ -306,10 +308,10 @@
                 <div id="divAddAboutSection" runat="server">
                     <h2>Add New About Section</h2>
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
-                    <asp:TextBox ID="txtAboutSectionName" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtAboutSectionName" runat="server"/>
 
                     <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
-                    <asp:TextBox ID="txtAboutSectionContent" runat="server"/>
+                    <asp:TextBox CssClass="form-control" ID="txtAboutSectionContent" runat="server"/>
 
                     <asp:Button CssClass="btn btn-primary" ID="btnConfirmAboutSectionAdd" runat="server" text="Add Section" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
                     <asp:Button CssClass="btn btn-secondary" ID="btnCancelAboutSectionAdd" runat="server" text="Cancel" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
