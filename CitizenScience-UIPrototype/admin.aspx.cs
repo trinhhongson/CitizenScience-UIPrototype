@@ -53,6 +53,8 @@ namespace CitizenScience_UIPrototype
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
+
+                    divLocationDownloadCheck.Visible = false;
                     break;
                 case "manageAdmins":
                     divAddLocation.Visible = false;
@@ -96,6 +98,8 @@ namespace CitizenScience_UIPrototype
 
                     divUploadError.Visible = false;
 
+                    divLocationDownloadCheck.Visible = false;
+
                     divNewAdmin.Visible = false;
 
                     divEditAlbum.Visible = false;
@@ -117,7 +121,10 @@ namespace CitizenScience_UIPrototype
         ////////////////////////////////////////////////////////////////////////////////////////      DOWNLOAD WATERSHED DATA FUNCTIONS
         protected void ddlSensorDownloadWatersheds_Change(object sender, EventArgs e)
         {
-            
+            if(ddlSensorDownloadWatersheds.SelectedValue != "")
+                divLocationDownloadCheck.Visible = true;
+            else
+                divLocationDownloadCheck.Visible = false;
         }
 
 
