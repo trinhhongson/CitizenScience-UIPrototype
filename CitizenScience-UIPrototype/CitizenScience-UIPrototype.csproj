@@ -70,6 +70,8 @@
     <Content Include="about.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="gallery.aspx" />
+    <Content Include="img\bell-tower.jpg" />
+    <Content Include="img\graph.png" />
     <Content Include="img\logo.jpg" />
     <Content Include="img\temple-logo.png" />
     <Content Include="map.aspx" />
