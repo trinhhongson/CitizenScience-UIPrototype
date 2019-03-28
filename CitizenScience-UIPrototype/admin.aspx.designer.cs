@@ -193,13 +193,13 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divManageAdmins;
         
         /// <summary>
-        /// btnCreateNewAdmin control.
+        /// btnAddNewAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateNewAdmin;
+        protected global::System.Web.UI.WebControls.Button btnAddNewAdmin;
         
         /// <summary>
         /// divNewAdmin control.
@@ -265,13 +265,13 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.TextBox txtNewAdminEmail;
         
         /// <summary>
-        /// btnAddNewAdmin control.
+        /// btnCreateNewAdmin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddNewAdmin;
+        protected global::System.Web.UI.WebControls.Button btnCreateNewAdmin;
         
         /// <summary>
         /// btnCancelNewAdmin control.
@@ -310,13 +310,13 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.Button txtAdminVolunteersGallery;
         
         /// <summary>
-        /// btnCreateAlbum control.
+        /// btnAddAlbum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateAlbum;
+        protected global::System.Web.UI.WebControls.Button btnAddAlbum;
         
         /// <summary>
         /// divAddNewAlbum control.
@@ -355,13 +355,13 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.DropDownList ddlNewAlbumGroup;
         
         /// <summary>
-        /// btnAddAlbum control.
+        /// btnCreateAlbum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddAlbum;
+        protected global::System.Web.UI.WebControls.Button btnCreateAlbum;
         
         /// <summary>
         /// btnCancelAlbum control.
@@ -400,15 +400,6 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.Button btnUploadAlbumImage;
         
         /// <summary>
-        /// btnDeleteSelectedGalleryImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDeleteSelectedGalleryImage;
-        
-        /// <summary>
         /// ddlMoveGalleryImage control.
         /// </summary>
         /// <remarks>
@@ -425,6 +416,15 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMoveGalleryImage;
+        
+        /// <summary>
+        /// btnDeleteSelectedGalleryImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteSelectedGalleryImage;
         
         /// <summary>
         /// btnCloseEditGallery control.
