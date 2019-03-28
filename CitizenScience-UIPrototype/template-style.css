@@ -1,0 +1,11 @@
+﻿body {
+    background-color: #C1EEFE;
+}
+.AdminSectionDiv{
+    background-color:white;       
+    margin:auto;
+}
+.AdminPopupDiv{    
+    border: 2px solid black; 
+    background-color:white;
+}

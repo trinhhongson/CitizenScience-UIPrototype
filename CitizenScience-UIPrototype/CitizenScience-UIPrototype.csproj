@@ -70,9 +70,17 @@
     <Content Include="about.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="gallery.aspx" />
-    <Content Include="Global.asax" />
+
     <Content Include="img\logo.jpg" />
     <Content Include="img\temple-logo.png" />
+    <Content Include="img\Volunteer.gif" />
+    <Content Include="img\volunteer\person1.png" />
+    <Content Include="img\volunteer\person2.jpg" />
+    <Content Include="img\volunteer\person3.gif" />
+    <Content Include="img\Watershed.jpg" />
+    <Content Include="img\watershed\water1.jpeg" />
+    <Content Include="img\watershed\water2.jpg" />
+    <Content Include="img\watershed\water3.jpg" />
     <Content Include="map.aspx" />
     <Content Include="mapAPI-style.css" />
     <Content Include="template-style.css" />
