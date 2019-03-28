@@ -12,7 +12,7 @@
             <ul class="dropdown-menu">
                 <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 1</a>
                     <ul>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 1</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#locationModal">Location 1</a></li>
                         <li class="dropdown-item"><a class="dropdown-item" href="#">Location 2</a></li>
                         <li class="dropdown-item"><a class="dropdown-item" href="#">Location 3</a></li>
                     </ul>
@@ -31,6 +31,44 @@
                     </ul>
                 </li>
             </ul>
+            <!--Modal-->
+            <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="max-width: 200%;">
+                <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="location">Location 1</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="img/bell-tower.jpg" alt="bell-tower" style="width: 384px; height: 255px;" /><br />
+                                        <a href="gallery.aspx">more picture >></a>
+                                        <p>Some description some description some description some description</p>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-7 ml-auto">
+                                        <img src="img/graph.png" alt="graph" /><br />
+                                        <label>From:</label>
+                                        <input type="date"/>
+                                        <label>To:</label>
+                                        <input type="date"/>
+                                        <br /><input type="radio" name="temperature" />Celsius
+                                        <br /><input type="radio" name="temperature" />Fahrenheit
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Download Temperature File</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--Map API Javascript-->
@@ -51,7 +89,8 @@
 
             var contentString_main = '<img src="img/logo.jpg" alt="Temple_Univeristy" style="width: 50px; height: 50px;"><br /><br />'
                 + '<h3>Temple University</h3>'
-                + '<p>MAIN CAMPUS Description Description </p>';
+                + '<p>MAIN CAMPUS Description Description </p>'
+                + '<a href="#" data-toggle="modal" data-target="#locationModal">Location 1</a>';
 
             var infowindow_main = new google.maps.InfoWindow({
                 content: contentString_main
