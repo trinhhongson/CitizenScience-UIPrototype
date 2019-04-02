@@ -71,6 +71,7 @@
     <Content Include="admin.aspx" />
     <Content Include="gallery.aspx" />
     <Content Include="galleryAPI-style.css" />
+    <Content Include="Global.asax" />
     <Content Include="img\bell-tower.jpg" />
     <Content Include="img\graph.png" />
     <Content Include="img\logo.jpg" />
@@ -116,6 +117,9 @@
     </Compile>
     <Compile Include="gallery.aspx.designer.cs">
       <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="map.aspx.cs">
       <DependentUpon>map.aspx</DependentUpon>
