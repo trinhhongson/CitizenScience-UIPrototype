@@ -25,8 +25,6 @@
                     provide accurate data reporting of the measured water temperature. The project will help 
                     visualize the data collected and allow for users that visit the application to view the 
                     various metrics. 
-
-
                 </p>
                 <a href="#volunteer_form" class=" btn btn-outline-primary" role="button" aria-pressed="true">Interested in Volunteering?</a>
             </div>
@@ -69,8 +67,6 @@
                         data reporting of the measured water temperature. The project will help 
                         visualize the data collected and allow for users that visit the application
                         to view the various metrics. 
-
-
                     </div>
                 </div>
             </div>
@@ -100,7 +96,6 @@
                         This project will serve to monitor local water source statistics while 
                         also engaging the community by allowing them to be actively involved in 
                         the collection and analysis of the data.
-
                     </div>
                 </div>
             </div>
@@ -124,8 +119,7 @@
         <div class="col-lg-12">
             <div class="container">
                 <div class="collapse" id="temp1">
-                    <div class="card card-body"
-                        >
+                    <div class="card card-body">
                      The main benefits to be gained through this new system will be a secure and organized data 
                         storage method for vital water temperature data as well as a way of involving Greater 
                         Philadelphia area residents in the conservation of local water ecosystems. 
@@ -136,28 +130,22 @@
             </div>
         </div>
     </div>
-    <br />
     <!--Volunteer Form-->
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <h1 style="text-align: center;">Citizen Science Volunteer Form </h1>
-        </div>
-        <div class="col-lg-2"></div>
-    </div>
     <div id="volunteer_form">
+    <div class="container"><hr /></div>
         <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
+                <h1 style="text-align: center;">Citizen Science Volunteer Form </h1>
                 <h4 style="text-align: center;">Please fill out the form below if you are interested in volunteering. </h4>
             </div>
             <div class="col-lg-2"></div>
         </div>
         <div class="container">
             <div class="row">
-                <div id="form1" class="col-lg-12" style="text-align: center;">
+                <div id="form1" class="col-lg-12">
                     <div class="form-row">
-                        <div class="form-group  col-md-6">
+                        <div class="form-group col-md-6">
                             <label for="fname">First Name</label>
                             <label for="fname" style="color: red;">*</label>
                             <input type="text" class="form-control" id="fname" placeholder="First Name">
@@ -183,7 +171,7 @@
             </div>
         </div>
     </div>
-    <br />
+    <div class="container"><hr /></div>
     <!---->
     <div class="row">
         <div class="col-lg-2"></div>
