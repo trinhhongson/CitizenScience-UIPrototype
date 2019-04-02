@@ -22,13 +22,14 @@ namespace CitizenScience_UIPrototype
             }
         }
 
-//      FUNCTION TO CHANGE DISPLAYED ADMIN PAGE
-        protected void ddlAdminAction_Change(object sender, EventArgs e)
+        //  FUNCTION TO NAVIGATE ADMIN PANELS
+        protected void Navigate(object sender, EventArgs e)
         {
-            string page = ddlAdminAction.SelectedValue;
-            switch (page)
+            LinkButton lnk = sender as LinkButton;            
+            switch (lnk.Attributes["CustomParameter"].ToString())
             {
-                case "addLocation":
+                case "location":
+                    lblPanelTitle.Text = "New Location:";
                     divAddLocation.Visible = true;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
@@ -36,7 +37,8 @@ namespace CitizenScience_UIPrototype
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
                     break;
-                case "uploadSensorData":
+                case "upload":
+                    lblPanelTitle.Text = "Upload Sensor Data:";
                     divAddLocation.Visible = false;
                     divUploadSensorData.Visible = true;
                     divDownloadSensorData.Visible = false;
@@ -46,17 +48,17 @@ namespace CitizenScience_UIPrototype
 
                     divUploadError.Visible = false;
                     break;
-                case "downloadSensorData":
+                case "download":
+                    lblPanelTitle.Text = "Download Sensor Data:";
                     divAddLocation.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = true;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
-
-                    divLocationDownloadCheck.Visible = false;
                     break;
-                case "manageAdmins":
+                case "admins":
+                    lblPanelTitle.Text = "Manage Admins:";
                     divAddLocation.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
@@ -66,7 +68,8 @@ namespace CitizenScience_UIPrototype
 
                     divNewAdmin.Visible = false;
                     break;
-                case "editGallery":
+                case "gallery":
+                    lblPanelTitle.Text = "Manage Gallery:";
                     divAddLocation.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
@@ -77,7 +80,8 @@ namespace CitizenScience_UIPrototype
                     divEditAlbum.Visible = false;
                     divAddNewAlbum.Visible = false;
                     break;
-                case "editAbout":
+                case "about":
+                    lblPanelTitle.Text = "Manage About:";
                     divAddLocation.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
@@ -86,26 +90,6 @@ namespace CitizenScience_UIPrototype
                     divEditAbout.Visible = true;
 
                     divEditAboutSection.Visible = false;
-                    divAddAboutSection.Visible = false;
-                    break;
-                case "":
-                    divAddLocation.Visible = false;
-                    divUploadSensorData.Visible = false;
-                    divDownloadSensorData.Visible = false;
-                    divManageAdmins.Visible = false;
-                    divEditGallery.Visible = false;
-                    divEditAbout.Visible = false;
-
-                    divUploadError.Visible = false;
-
-                    divLocationDownloadCheck.Visible = false;
-
-                    divNewAdmin.Visible = false;
-
-                    divEditAlbum.Visible = false;
-                    divAddNewAlbum.Visible = false;
-
-                    divEditAbout.Visible = false;
                     divAddAboutSection.Visible = false;
                     break;
             }
@@ -121,10 +105,6 @@ namespace CitizenScience_UIPrototype
         ////////////////////////////////////////////////////////////////////////////////////////      DOWNLOAD WATERSHED DATA FUNCTIONS
         protected void ddlSensorDownloadWatersheds_Change(object sender, EventArgs e)
         {
-            if(ddlSensorDownloadWatersheds.SelectedValue != "")
-                divLocationDownloadCheck.Visible = true;
-            else
-                divLocationDownloadCheck.Visible = false;
         }
 
 
@@ -155,10 +135,12 @@ namespace CitizenScience_UIPrototype
         protected void btnEditAlbum_Click(object sender, EventArgs e)
         {
             divEditAlbum.Visible = true;
+            divAddNewAlbum.Visible = false;
         }
         //  Open New Album Form
         protected void btnAddAlbum_Click(object sender, EventArgs e)
         {
+            divEditAlbum.Visible = false;
             divAddNewAlbum.Visible = true;
         }
         //  Submit New Album Form
@@ -176,9 +158,11 @@ namespace CitizenScience_UIPrototype
         protected void btnAddAboutSection_Click(object sender, EventArgs e)
         {
             divAddAboutSection.Visible = true;
+            divEditAboutSection.Visible = false;
         }
         protected void btnEditAboutSection_Click(object sender, EventArgs e)
         {
+            divAddAboutSection.Visible = false;
             divEditAboutSection.Visible = true;
         }
         protected void HideEditAboutSection(object sender, EventArgs e)
