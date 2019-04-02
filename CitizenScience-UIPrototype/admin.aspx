@@ -25,6 +25,14 @@
                 <asp:Label ID="lblPanelTitle" CssClass="h1 d-block pt-3" runat="server" style="text-decoration:underline"/>
                 <div class="row">
 
+                    <div id="divAdminPrompt" class="col-md-12" runat="server">
+                        <div class="row">
+                            <div class="col-md-5 offset-2">
+                                <h1 class="text-muted text-center my-5 font-weight-bold">Select Administrator Action Panel<br />&larr;</h1>
+                            </div>
+                        </div>                        
+                    </div>
+
     <%-- ADD LOCATION PANEL --%>    
                     <div class="col-md-12" id="divAddLocation" runat="server">
                         <div class="row">
@@ -50,6 +58,17 @@
                                         <asp:TextBox CssClass="form-control" ID="txtNewLocationLatitude" runat="server" required="true"/>
                                     </div>
                                 </div>  
+                                <div class="row my-3">
+                                    <div class="col-md-6">
+                                        <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Location Watershed:</asp:Label>
+                                        <asp:DropDownList CssClass="form-control" ID="ddlAddLocationWatershed" runat="server">
+                                            <asp:ListItem Value="">Watershed...</asp:ListItem>
+                                            <asp:ListItem Value="w1">Watershed1</asp:ListItem>
+                                            <asp:ListItem Value="w2">Watershed2</asp:ListItem>
+                                            <asp:ListItem Value="w3">Watershed3</asp:ListItem>                                             
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
                                 <div class="row my-3">       
                                     <span style="color:red">*</span><asp:Label AssociatedControlID="fulNewImg" CssClass="w-75" runat="server">Profile Image:</asp:Label>
                                     <div class="input-group w-50" id="fulNewImg" runat="server">            
@@ -143,7 +162,7 @@
                         </div>
                         <div class="row  pt-1">
                             <div class="col-md-6">
-                                <table class="table table-info rounded w-75">
+                                <table class="table table-primary rounded w-75">
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col" class="w-50">
@@ -205,7 +224,7 @@
                         <div class="row mt-3">
                             <div class="col-md-7">
                                 <asp:Button CssClass="btn btn-primary my-1" ID="btnAddNewAdmin" runat="server" text="+ New Administrator" OnClick="btnAddNewAdmin_Click" UseSubmitBehavior="false"/>
-                                <table class="table table-info rounded">
+                                <table class="table table-primary rounded">
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col">Username</th>

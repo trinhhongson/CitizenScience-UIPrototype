@@ -31,6 +31,15 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.Label lblPanelTitle;
         
         /// <summary>
+        /// divAdminPrompt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAdminPrompt;
+        
+        /// <summary>
         /// divAddLocation control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNewLocationLatitude;
+        
+        /// <summary>
+        /// ddlAddLocationWatershed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlAddLocationWatershed;
         
         /// <summary>
         /// fulNewImg control.
@@ -452,60 +470,6 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEditAbout;
-        
-        /// <summary>
-        /// btnAddAboutSection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddAboutSection;
-        
-        /// <summary>
-        /// divAddAboutSection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAddAboutSection;
-        
-        /// <summary>
-        /// txtAboutSectionName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAboutSectionName;
-        
-        /// <summary>
-        /// txtAboutSectionContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAboutSectionContent;
-        
-        /// <summary>
-        /// btnConfirmAboutSectionAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmAboutSectionAdd;
-        
-        /// <summary>
-        /// btnCancelAboutSectionAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelAboutSectionAdd;
         
         /// <summary>
         /// divEditAboutSection control.

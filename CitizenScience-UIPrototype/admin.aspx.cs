@@ -18,13 +18,15 @@ namespace CitizenScience_UIPrototype
                 divDownloadSensorData.Visible = false;
                 divManageAdmins.Visible = false;
                 divEditGallery.Visible = false;
-                divEditAbout.Visible = false;                
+                divEditAbout.Visible = false;
+                divAdminPrompt.Visible = true;
             }
         }
 
         //  FUNCTION TO NAVIGATE ADMIN PANELS
         protected void Navigate(object sender, EventArgs e)
         {
+            divAdminPrompt.Visible = false;
             LinkButton lnk = sender as LinkButton;            
             switch (lnk.Attributes["CustomParameter"].ToString())
             {
