@@ -417,7 +417,9 @@
 
                             <%-- MAIN EDIT ABOUT SECTION --%>
                             <div class="col-md-4">
+                                <%--
                                 <asp:Button CssClass="btn btn-primary my-1" ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click" UseSubmitBehavior="false"/>
+                                --%>
                                 <table class="table table-primary">
                                     <thead class="thead-light">
                                         <tr>
@@ -449,7 +451,8 @@
                                 </table>
                             </div>
 
-                            <%-- ADD ABOUT SECTION --%>
+                            <%-- 
+                            <%-- ADD ABOUT SECTION --%
                             <div id="divAddAboutSection" class="col-md-6 offset-1" runat="server">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -465,6 +468,7 @@
                                     </div>
                                 </div>
                             </div>
+                            --%>
 
                             <%-- EDIT ABOUT SECTION --%>
                             <div id="divEditAboutSection" class="col-md-6 offset-1" runat="server">
