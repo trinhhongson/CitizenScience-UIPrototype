@@ -90,7 +90,7 @@ namespace CitizenScience_UIPrototype
                     divEditAbout.Visible = true;
 
                     divEditAboutSection.Visible = false;
-                    divAddAboutSection.Visible = false;
+                    //divAddAboutSection.Visible = false;
                     break;
             }
         }
@@ -154,15 +154,16 @@ namespace CitizenScience_UIPrototype
         }
 
 
-        ////////////////////////////////////////////////////////////////////////////////////////      MANAGE ABOUT FUNCTIONS     
+        ////////////////////////////////////////////////////////////////////////////////////////      MANAGE ABOUT FUNCTIONS   
+        ///
         protected void btnAddAboutSection_Click(object sender, EventArgs e)
         {
-            divAddAboutSection.Visible = true;
+            //divAddAboutSection.Visible = true;
             divEditAboutSection.Visible = false;
         }
         protected void btnEditAboutSection_Click(object sender, EventArgs e)
         {
-            divAddAboutSection.Visible = false;
+            //divAddAboutSection.Visible = false;
             divEditAboutSection.Visible = true;
         }
         protected void HideEditAboutSection(object sender, EventArgs e)
@@ -171,7 +172,7 @@ namespace CitizenScience_UIPrototype
         }
         protected void HideAddAboutSection(object sender, EventArgs e)
         {
-            divAddAboutSection.Visible = false;
+            //divAddAboutSection.Visible = false;
         }
     }
 }
