@@ -85,7 +85,7 @@
           <p class="lead text-muted">Here will be a short description about this photo gallery</p>
           <p>
             <a href="#" class="btn btn-primary my-2" onclick="myFunction3()">Show All</a>
-            <a href="#" class="btn btn-primary my-2" onclick="myFunction()">Watersheds</a>
+            <a href="#" class="btn btn-primary my-2" onclick="myFunction()">Locations</a>
             <a href="#" class="btn btn-primary my-2" onclick="myFunction2()">Volunteer</a>
           </p>
         </div>
