@@ -28,7 +28,7 @@
                     <div id="divAdminPrompt" class="col-md-12" runat="server">
                         <div class="row">
                             <div class="col-md-5 offset-2">
-                                <h1 class="text-muted text-center my-5 font-weight-bold">Select Administrator Action Panel<br />&larr;</h1>
+                                <h1 class="text-muted text-center my-5 font-weight-bold">Select Administrator Action Panel<br />&#8678;</h1>
                             </div>
                         </div>                        
                     </div>
@@ -109,14 +109,30 @@
     <%-- UPLOAD SENSOR DATA PANEL --%>
                     <div class="col-md-6" id="divUploadSensorData" runat="server">
                         <div class="row my-3">       
-                            <span style="color:red">*</span><asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Sensor Information File:</asp:Label>
-                            <div class="input-group w-50" id="fulUpload" runat="server">            
-                                <div class="custom-file">
-                                    <asp:Label AssociatedControlID="fulUploadSensorData" CssClass="custom-file-label" runat="server">Choose a temperature file...</asp:Label>
-                                    <asp:FileUpload ID="fulUploadSensorData" CssClass="custom-file-input" runat="server"/>                              
+                            <div class="col-md-8">
+                                <span style="color:red">*</span><asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Sensor Information File:</asp:Label>                        
+                                <div class="input-group" id="fulUpload" runat="server">            
+                                    <div class="custom-file">
+                                        <asp:Label AssociatedControlID="fulUploadSensorData" CssClass="custom-file-label" runat="server">Choose a temperature file...</asp:Label>
+                                        <asp:FileUpload ID="fulUploadSensorData" CssClass="custom-file-input" runat="server"/>                              
+                                    </div>
                                 </div>
-                            </div>                            
-                        </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Data Location:</asp:Label>
+                                <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                    <asp:ListItem>Recorded at...</asp:ListItem>
+                                    <asp:ListItem>Location1</asp:ListItem>
+                                    <asp:ListItem>Location2</asp:ListItem>
+                                    <asp:ListItem>Location3</asp:ListItem>                                             
+                                    <asp:ListItem>Location4</asp:ListItem>                                             
+                                    <asp:ListItem>Location5</asp:ListItem>                                             
+                                    <asp:ListItem>Location6</asp:ListItem>                                             
+                                    <asp:ListItem>Location7</asp:ListItem>                                             
+                                    <asp:ListItem>Location8</asp:ListItem>                                             
+                                </asp:DropDownList>
+                            </div>
+                        </div>                                                  
                         <div class="row my-3">
                             <asp:Button CssClass="btn btn-primary" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
                         </div>     
@@ -399,31 +415,31 @@
                                 <div class="row my-2">
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://cdn-images-1.medium.com/max/1600/1*1gPIp905RFS3kd9iJ3de0g.jpeg" height="200" width="200"/>                                               
                                     </div>
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-6">                                                                                       
-                                        <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
-                                    </div>
-                                    <div class="col-md-6">                                                                                       
-                                        <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://cdn-images-1.medium.com/max/2600/1*xGNVMFqXXTeK7ZyK2eN21Q.jpeg" height="200" width="200"/>                                               
                                     </div>
                                 </div>
                                 <div class="row my-2">
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://i0.wp.com/readlearncode.com/wp-content/uploads/2015/11/source-2147529_1280.jpg?fit=1280%2C853&ssl=1" height="200" width="200"/>                                               
                                     </div>
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-the-stream-in-the-natural-area.jpg" height="200" width="200"/>                                               
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col-md-6">                                                                                       
+                                        <asp:CheckBox runat="server" />
+                                        <img src="https://static1.squarespace.com/static/5a996299372b965bcbaf00fe/5ab1399703ce640c3c57967d/5ab13a6b758d4671e7edd01c/1521564445113/Photos_NCB+%286%29.JPG?format=1000w" height="200" width="200"/>                                               
+                                    </div>
+                                    <div class="col-md-6">                                                                                       
+                                        <asp:CheckBox runat="server" />
+                                        <img src="https://cdn.pixabay.com/photo/2017/08/07/02/00/stream-2598633_960_720.jpg" height="200" width="200"/>                                               
                                     </div>
                                 </div>                                
                             </div>
