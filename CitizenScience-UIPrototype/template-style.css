@@ -1,3 +1,11 @@
 ﻿body {
     background-color: #C1EEFE;
 }
+
+.navbar-custom {
+    background-color: #0155C4;
+}
+
+.navbar .navbar-nav li a {
+
+}
