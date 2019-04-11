@@ -50,19 +50,21 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="img/bell-tower.jpg" alt="bell-tower" style="width: 384px; height: 255px;" /><br />
-                                        <a href="gallery.aspx">more picture >></a>
+                                        <img src="img/watershed.png" alt="bell-tower" style="width: 400px; height: 333px;" /><br />
+                                        <a href="gallery.aspx">more pictures >></a>
                                         <p>Some description some description some description some description</p>
                                     </div>
                                     <div class="col-md-1"></div>
                                     <div class="col-md-7 ml-auto">
                                         <img src="img/graph.png" alt="graph" /><br />
+                                        <br />
                                         <label>From:</label>
                                         <input type="date"/>
                                         <label>To:</label>
                                         <input type="date"/>
-                                        <br /><input type="radio" name="temperature" />Celsius
-                                        <br /><input type="radio" name="temperature" />Fahrenheit
+                                        <button>Reset</button>
+                                        <br /><input type="radio" name="temperature" /> Celsius
+                                        <br /><input type="radio" name="temperature" /> Fahrenheit
                                     </div>
                                 </div>
                             </div>
@@ -92,10 +94,10 @@
                 title: 'Temple Main'
             });
 
-            var contentString_main = '<img src="img/logo.jpg" alt="Temple_Univeristy" style="width: 50px; height: 50px;"><br /><br />'
-                + '<h3>Temple University</h3>'
-                + '<p>MAIN CAMPUS Description Description </p>'
-                + '<a href="#" data-toggle="modal" data-target="#locationModal">Location 1</a>';
+            var contentString_main = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Location 1</h3>'
+                + '<p>Watershed Location 1 Description Description </p>'
+                + '<a href="#" data-toggle="modal" data-target="#locationModal">more details >></a>';
 
             var infowindow_main = new google.maps.InfoWindow({
                 content: contentString_main
@@ -112,8 +114,8 @@
                 title: 'Temple Ambler'
             });
 
-            var contentString_ambler = '<img src="img/logo.jpg" alt="Temple_Univeristy" style="width: 50px; height: 50px;"><br /><br />'
-                + '<h3>Temple University</h3>'
+            var contentString_ambler = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Location 2</h3>'
                 + '<p>AMBLER Description Description </p>';
 
             var infowindow_ambler = new google.maps.InfoWindow({
@@ -131,8 +133,8 @@
                 title: 'Temple Center'
             });
 
-            var contentString_center = '<img src="img/logo.jpg" alt="Temple_Univeristy" style="width: 50px; height: 50px;"><br /><br />'
-                + '<h3>Temple University</h3>'
+            var contentString_center = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Location 3</h3>'
                 + '<p>CENTER CITY Description Description </p>';
 
             var infowindow_center = new google.maps.InfoWindow({

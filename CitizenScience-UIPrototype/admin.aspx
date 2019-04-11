@@ -15,7 +15,9 @@
                     <asp:LinkButton OnClick="Navigate" CustomParameter="download" Text="Download Sensor Data" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                     <asp:LinkButton OnClick="Navigate" CustomParameter="admins" Text="Manage Administrators" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                     <asp:LinkButton OnClick="Navigate" CustomParameter="gallery" Text="Edit Gallery" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
+                    <%--
                     <asp:LinkButton OnClick="Navigate" CustomParameter="about" Text="Edit About" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
+                    --%>
                 </div>
             </div>
 
@@ -24,6 +26,14 @@
             <div class="col-md-10" id="divPanels">
                 <asp:Label ID="lblPanelTitle" CssClass="h1 d-block pt-3" runat="server" style="text-decoration:underline"/>
                 <div class="row">
+
+                    <div id="divAdminPrompt" class="col-md-12" runat="server">
+                        <div class="row">
+                            <div class="col-md-5 offset-2">
+                                <h1 class="text-muted text-center my-5 font-weight-bold">Select Administrator Action Panel<br />&#8678;</h1>
+                            </div>
+                        </div>                        
+                    </div>
 
     <%-- ADD LOCATION PANEL --%>    
                     <div class="col-md-12" id="divAddLocation" runat="server">
@@ -50,6 +60,17 @@
                                         <asp:TextBox CssClass="form-control" ID="txtNewLocationLatitude" runat="server" required="true"/>
                                     </div>
                                 </div>  
+                                <div class="row my-3">
+                                    <div class="col-md-6">
+                                        <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Location Watershed:</asp:Label>
+                                        <asp:DropDownList CssClass="form-control" ID="ddlAddLocationWatershed" runat="server">
+                                            <asp:ListItem Value="">Watershed...</asp:ListItem>
+                                            <asp:ListItem Value="w1">Watershed1</asp:ListItem>
+                                            <asp:ListItem Value="w2">Watershed2</asp:ListItem>
+                                            <asp:ListItem Value="w3">Watershed3</asp:ListItem>                                             
+                                        </asp:DropDownList>
+                                    </div>
+                                </div>
                                 <div class="row my-3">       
                                     <span style="color:red">*</span><asp:Label AssociatedControlID="fulNewImg" CssClass="w-75" runat="server">Profile Image:</asp:Label>
                                     <div class="input-group w-50" id="fulNewImg" runat="server">            
@@ -90,16 +111,33 @@
     <%-- UPLOAD SENSOR DATA PANEL --%>
                     <div class="col-md-6" id="divUploadSensorData" runat="server">
                         <div class="row my-3">       
-                            <span style="color:red">*</span><asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Sensor Information File:</asp:Label>
-                            <div class="input-group w-50" id="fulUpload" runat="server">            
-                                <div class="custom-file">
-                                    <asp:Label AssociatedControlID="fulUploadSensorData" CssClass="custom-file-label" runat="server">Choose a temperature file...</asp:Label>
-                                    <asp:FileUpload ID="fulUploadSensorData" CssClass="custom-file-input" runat="server"/>                              
+                            <div class="col-md-8">
+                                <span style="color:red">*</span><asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Sensor Information File:</asp:Label>                        
+                                <div class="input-group" id="fulUpload" runat="server">            
+                                    <div class="custom-file">
+                                        <asp:Label AssociatedControlID="fulUploadSensorData" CssClass="custom-file-label" runat="server">Choose a temperature file...</asp:Label>
+                                        <asp:FileUpload ID="fulUploadSensorData" CssClass="custom-file-input" runat="server"/>                              
+                                    </div>
                                 </div>
-                            </div>                            
-                        </div>
+                            </div>
+                            <div class="col-md-4">
+                                <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Data Location:</asp:Label>
+                                <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
+                                    <asp:ListItem>Recorded at...</asp:ListItem>
+                                    <asp:ListItem>Location1</asp:ListItem>
+                                    <asp:ListItem>Location2</asp:ListItem>
+                                    <asp:ListItem>Location3</asp:ListItem>                                             
+                                    <asp:ListItem>Location4</asp:ListItem>                                             
+                                    <asp:ListItem>Location5</asp:ListItem>                                             
+                                    <asp:ListItem>Location6</asp:ListItem>                                             
+                                    <asp:ListItem>Location7</asp:ListItem>                                             
+                                    <asp:ListItem>Location8</asp:ListItem>                                             
+                                </asp:DropDownList>
+                            </div>
+                        </div>                                                  
                         <div class="row my-3">
-                            <asp:Button CssClass="btn btn-primary" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
+                            <asp:Button CssClass="btn btn-primary mr-2" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
+                            <asp:Button CssClass="btn btn-primary" ID="btnFileFormat" runat="server" text="Download File Format"  UseSubmitBehavior="false" />
                         </div>     
                         <div class="row my-2"> 
                             <div class="col-md-12">                            
@@ -134,21 +172,21 @@
     <%-- DOWNLOAD SENSOR DATA PANEL --%>
                     <div class="col-md-10" id="divDownloadSensorData" runat="server">
                         <div class="row pt-3">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <asp:Button CssClass="btn btn-primary" ID="btnDownloadAllSensorData" runat="server" text="Download All Data" />
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <asp:Button CssClass="btn btn-primary" ID="btnDownloadSelectedSensorData" runat="server" text="Download Selected Data" />
                             </div>
                         </div>
                         <div class="row  pt-1">
                             <div class="col-md-6">
-                                <table class="table table-info rounded w-75">
+                                <table class="table table-primary rounded w-75">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col" class="w-50">
+                                            <th scope="col" class="w-75">
                                                 <asp:DropDownList CssClass="form-control" ID="ddlSensorDownloadWatersheds" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSensorDownloadWatersheds_Change">
-                                                    <asp:ListItem Value="">Watersheds...</asp:ListItem>
+                                                    <asp:ListItem Value="">All Watersheds...</asp:ListItem>
                                                     <asp:ListItem Value="w1">Watershed1</asp:ListItem>
                                                     <asp:ListItem Value="w2">Watershed2</asp:ListItem>
                                                     <asp:ListItem Value="w3">Watershed3</asp:ListItem>                                             
@@ -205,7 +243,7 @@
                         <div class="row mt-3">
                             <div class="col-md-7">
                                 <asp:Button CssClass="btn btn-primary my-1" ID="btnAddNewAdmin" runat="server" text="+ New Administrator" OnClick="btnAddNewAdmin_Click" UseSubmitBehavior="false"/>
-                                <table class="table table-info rounded">
+                                <table class="table table-primary rounded">
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col">Username</th>
@@ -302,21 +340,21 @@
                                     <tr>
                                         <td>Album2</td>
                                         <td>Another album with other pictures</td>
-                                        <td>Watershed</td>
+                                        <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
                                     <tr>
                                         <td>Album3</td>
                                         <td>A third album with even more pictures</td>
-                                        <td>Watershed</td>
+                                        <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
                                     <tr>
                                         <td>Album4</td>
                                         <td>This album has pictures just like the others, quality content in here</td>
-                                        <td>Watershed</td>
+                                        <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
@@ -342,7 +380,7 @@
                                 <span style="color:red">*</span><asp:Label AssociatedControlID="ddlNewAlbumGroup" runat="server">Album Category:</asp:Label>
                                 <asp:DropDownList CssClass="form-control" ID="ddlNewAlbumGroup" runat="server">
                                     <asp:ListItem>Category...</asp:ListItem>
-                                    <asp:ListItem>Watershed</asp:ListItem>
+                                    <asp:ListItem>Location</asp:ListItem>
                                     <asp:ListItem>Volunteer</asp:ListItem>
                                 </asp:DropDownList>
 
@@ -357,7 +395,7 @@
                                         <asp:Button CssClass="btn btn-secondary mr-5" ID="btnCloseEditGallery" runat="server" text="Back to Gallery" OnClick="btnCloseEditGallery_Click" UseSubmitBehavior="false"/>
                                     </div>
                                 </div> 
-                                <h2>Edit Album:</h2>                                                               
+                                <h2>Edit Album1:</h2>                                                               
                                 <div class="row my-2">
                                     <div class="col-md-12">
                                         <asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Add New Image:</asp:Label>
@@ -380,31 +418,31 @@
                                 <div class="row my-2">
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://cdn-images-1.medium.com/max/1600/1*1gPIp905RFS3kd9iJ3de0g.jpeg" height="200" width="200"/>                                               
                                     </div>
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-6">                                                                                       
-                                        <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
-                                    </div>
-                                    <div class="col-md-6">                                                                                       
-                                        <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://cdn-images-1.medium.com/max/2600/1*xGNVMFqXXTeK7ZyK2eN21Q.jpeg" height="200" width="200"/>                                               
                                     </div>
                                 </div>
                                 <div class="row my-2">
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://i0.wp.com/readlearncode.com/wp-content/uploads/2015/11/source-2147529_1280.jpg?fit=1280%2C853&ssl=1" height="200" width="200"/>                                               
                                     </div>
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://www.fs.fed.us/rm/boise/research/techtrans/projects/scienceforkids/images/watershed.jpg" height="200" width="200"/>                                               
+                                        <img src="https://www.goodfreephotos.com/albums/united-states/wisconsin/madison/wisconsin-madison-the-stream-in-the-natural-area.jpg" height="200" width="200"/>                                               
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col-md-6">                                                                                       
+                                        <asp:CheckBox runat="server" />
+                                        <img src="https://static1.squarespace.com/static/5a996299372b965bcbaf00fe/5ab1399703ce640c3c57967d/5ab13a6b758d4671e7edd01c/1521564445113/Photos_NCB+%286%29.JPG?format=1000w" height="200" width="200"/>                                               
+                                    </div>
+                                    <div class="col-md-6">                                                                                       
+                                        <asp:CheckBox runat="server" />
+                                        <img src="https://cdn.pixabay.com/photo/2017/08/07/02/00/stream-2598633_960_720.jpg" height="200" width="200"/>                                               
                                     </div>
                                 </div>                                
                             </div>
