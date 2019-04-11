@@ -15,7 +15,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle" style="font-family:Garamond;color:dodgerblue;">Watersheds</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle" style="font-family:Garamond;color:dodgerblue;">Locations</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -98,7 +98,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed"> 
+                    <img src="img/Watershed0.png" alt="Watershed"> 
                     <div class="card-body">Watersheds 1</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed"> 
+                    <img src="img/Watershed1.jpg" alt="Watershed"> 
                     <div class="card-body">Watersheds 2</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -124,7 +124,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed"> 
+                    <img src="img/Watershed2.jpg" alt="Watershed"> 
                     <div class="card-body">Watersheds 3</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -138,7 +138,7 @@
 
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed"> 
+                    <img src="img/Watershed3.jpg" alt="Watershed"> 
                     <div class="card-body">Watersheds 4</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed"> 
+                    <img src="img/Watershed4.jpg" alt="Watershed"> 
                     <div class="card-body">Watersheds 5</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed.jpg" alt="Watershed">  
+                    <img src="img/Watershed5.jpg" alt="Watershed">  
                     <div class="card-body">Watersheds 6</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer.gif" alt="Volunteer">   
+                    <img src="img/Volunteer1.gif" alt="Volunteer">   
                     <div class="card-body">Volunteer 2</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -213,7 +213,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer.gif" alt="Volunteer">   
+                    <img src="img/Volunteer2.gif" alt="Volunteer">   
                     <div class="card-body">Volunteer 3</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -227,7 +227,7 @@
 
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                      <img src="img/Volunteer.gif" alt="Volunteer">                       
+                      <img src="img/volunteers3.jpg" alt="Volunteer">                       
                       <div class="card-body">Volunteer 4</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                      <img src="img/Volunteer.gif" alt="Volunteer">                    
+                      <img src="img/volunteer4.gif" alt="Volunteer">                    
                       <div class="card-body">Volunteer 5</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
@@ -253,7 +253,7 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer.gif" alt="Volunteer">   
+                    <img src="img/Volunteer5.gif" alt="Volunteer">   
                     <div class="card-body">Volunteer 6</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
