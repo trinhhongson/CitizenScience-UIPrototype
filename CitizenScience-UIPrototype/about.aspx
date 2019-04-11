@@ -13,8 +13,7 @@
         <div class="col-lg-4"></div>
     </div>
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="container">
                 <p>
                     Citizen Science Data System (CS) is a project headed by Dr. Laura Toran and Dr. Sarah Beganskas
@@ -29,8 +28,6 @@
                 <a href="#volunteer_form" class=" btn btn-outline-primary" role="button" aria-pressed="true">Interested in Volunteering?</a>
             </div>
         </div>
-        <div class="col-lg-2">
-        </div>
     </div>
     <!--Common Question-->
     <div class="row">
@@ -41,8 +38,7 @@
         <div class="col-lg-4"></div>
     </div>
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="container">
                 <button class="btn btn-primary" style="width: 100%;" data-toggle="collapse" data-target="#who1"
                     aria-expanded="false" aria-controls="collapseExample">
@@ -50,7 +46,6 @@
                 </button>
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
     <div class="row">
         <div class="col-lg-12">
@@ -74,8 +69,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="container">
                 <button class="btn btn-primary" style="width: 100%;" type="button" data-toggle="collapse" data-target="#goals1"
                     aria-expanded="false" aria-controls="collapseExample">
@@ -83,7 +77,6 @@
                 </button>
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
     <div class="row">
         <div class="col-lg-12">
@@ -103,9 +96,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-
+        <div class="col-lg-12">
             <div class="container">
                 <button class="btn btn-primary" style="width: 100%;" type="button" data-toggle="collapse" data-target="#temp1"
                     aria-expanded="false" aria-controls="collapseExample">
@@ -113,14 +104,13 @@
                 </button>
             </div>
         </div>
-        <div class="col-lg-2"></div>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <div class="container">
                 <div class="collapse" id="temp1">
                     <div class="card card-body">
-                     The main benefits to be gained through this new system will be a secure and organized data 
+                        The main benefits to be gained through this new system will be a secure and organized data 
                         storage method for vital water temperature data as well as a way of involving Greater 
                         Philadelphia area residents in the conservation of local water ecosystems. 
                         The system will be designed to allow administrative users to easily record relevant data.
@@ -132,18 +122,14 @@
     </div>
     <!--Volunteer Form-->
     <div id="volunteer_form">
-    <div class="container"><hr /></div>
-        <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
-                <h1 style="text-align: center;">Citizen Science Volunteer Form </h1>
-                <h4 style="text-align: center;">Please fill out the form below if you are interested in volunteering. </h4>
-            </div>
-            <div class="col-lg-2"></div>
-        </div>
         <div class="container">
-            <div class="row">
-                <div id="form1" class="col-lg-12">
+            <hr />
+        </div>
+        <h1 style="text-align: center;">Citizen Science Volunteer Form </h1>
+        <h4 style="text-align: center;">Please fill out the form below if you are interested in volunteering. </h4>
+        <div class="row">
+            <div id="form1" class="col-lg-12">
+                <div class="container">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="fname">First Name</label>
@@ -159,19 +145,20 @@
                     <div class="form-group ">
                         <label for="email">Email</label>
                         <label for="email" style="color: red;">*</label>
-                        <input type="email" class="form-control" id="email" placeholder="sample@CitizenScience.com">
+                        <input type="email" class="form-control" id="email" placeholder="sample@email.com">
                     </div>
                     <div class="form-group">
                         <label for="comments">Message</label>
-                        <textarea rows="5" class="form-control" id="comments" placeholder="(Optional) Send a message"></textarea>
+                        <textarea rows="5" class="form-control" id="comments" placeholder="Leave a message (Optional)"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-                <div class="col-lg-2"></div>
             </div>
         </div>
     </div>
-    <div class="container"><hr /></div>
+    <div class="container">
+        <hr />
+    </div>
     <!---->
     <div class="row">
         <div class="col-lg-2"></div>
@@ -193,9 +180,9 @@
                 using continuous monitoring to study  urban hydrology, evaluating stormwater control measures, 
                 applying hydrogeophysics to 
                 understand groundwater-surface water interactions, and fracture flow modeling.
-                <br /> 
+                <br />
                 <a href="https://sites.temple.edu/geotoran/">Website</a>
-                </small></h4>
+            </small></h4>
         </div>
         <div class="col-lg-2"></div>
     </div>
