@@ -1,9 +1,9 @@
 ﻿/* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-    height: 720px;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 600px;
+    margin-left: 20%;
+    margin-right: 20%;
     box-sizing: content-box;
     border: solid #007bff 1px;
 }
@@ -16,7 +16,7 @@ html, body {
 }
 
 #watershed {
-    padding-left: 10%;
+    padding-left: 20%;
 }
 
 .dropdown-menu > li > a:hover {
