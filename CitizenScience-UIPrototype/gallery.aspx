@@ -94,43 +94,43 @@
       <div id="myDIV" style="width:90%; margin:auto;">
         <div class="album py-5 bg-light" style="background-color: #C1EEFE;"> 
             <div class="container">
-              <h2 style="font-size:30px; font-family:Garamond; color:dodgerblue;">Watersheds</h2><hr /><br />
+              <h2 style="font-size:30px; font-family:Garamond; color:dodgerblue;">Locations</h2><hr /><br />
               <div class="row">
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed0.png" alt="Watershed"> 
-                    <div class="card-body">Watersheds 1</p>
+                    <img src="img/Watershed0.png" alt="Location"> 
+                    <div class="card-body">Location 1</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed1.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 2</p>
+                    <img src="img/Watershed1.jpg" alt="Location"> 
+                    <div class="card-body">Location 2</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed2.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 3</p>
+                    <img src="img/Watershed2.jpg" alt="Location"> 
+                    <div class="card-body">Location 3</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -138,39 +138,39 @@
 
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed3.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 4</p>
+                    <img src="img/Watershed3.jpg" alt="Location"> 
+                    <div class="card-body">Location 4</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed4.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 5</p>
+                    <img src="img/Watershed4.jpg" alt="Location"> 
+                    <div class="card-body">Location 5</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed5.jpg" alt="Watershed">  
-                    <div class="card-body">Watersheds 6</p>
+                    <img src="img/Watershed5.jpg" alt="Location">  
+                    <div class="card-body">Location 6</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -193,7 +193,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -206,7 +206,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -219,7 +219,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -233,7 +233,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -246,7 +246,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
@@ -259,7 +259,7 @@
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <%-- <small class="text-muted"># of pics</small> --%>
                       </div>
                     </div>
                   </div>
