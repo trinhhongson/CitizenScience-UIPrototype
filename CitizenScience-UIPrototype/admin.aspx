@@ -109,9 +109,9 @@
 
 
     <%-- UPLOAD SENSOR DATA PANEL --%>
-                    <div class="col-md-6" id="divUploadSensorData" runat="server">
-                        <div class="row my-3">       
-                            <div class="col-md-8">
+                    <div class="col-md-10" id="divUploadSensorData" runat="server">
+                        <div class="row my-3">                                  
+                            <div class="col-md-5">
                                 <span style="color:red">*</span><asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Sensor Information File:</asp:Label>                        
                                 <div class="input-group" id="fulUpload" runat="server">            
                                     <div class="custom-file">
@@ -119,8 +119,14 @@
                                         <asp:FileUpload ID="fulUploadSensorData" CssClass="custom-file-input" runat="server"/>                              
                                     </div>
                                 </div>
+                                <div class="row my-2">
+                                    <div class="col-md-12">
+                                        <asp:Button CssClass="btn btn-primary mr-2" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
+                                        <asp:Button CssClass="btn btn-primary" ID="btnFileFormat" runat="server" text="Download File Format"  UseSubmitBehavior="false" />
+                                    </div>
+                                </div>                                
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Data Location:</asp:Label>
                                 <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
                                     <asp:ListItem>Recorded at...</asp:ListItem>
@@ -134,11 +140,21 @@
                                     <asp:ListItem>Location8</asp:ListItem>                                             
                                 </asp:DropDownList>
                             </div>
-                        </div>                                                  
-                        <div class="row my-3">
-                            <asp:Button CssClass="btn btn-primary mr-2" ID="btnUploadSensorData" runat="server" text="Upload Data" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
-                            <asp:Button CssClass="btn btn-primary" ID="btnFileFormat" runat="server" text="Download File Format"  UseSubmitBehavior="false" />
-                        </div>     
+
+                            <div class="col-md-3 offset-1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <asp:Label AssociatedControlID="calError" runat="server">Search Error by Date:</asp:Label>
+                                        <input class="form-control" type="date" id="calError" runat="server"/>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-md-12">
+                                        <asp:Button CssClass="btn btn-primary mr-2" ID="btnSearchError" runat="server" text="Search" OnClick="btnUploadSensorData_Click" UseSubmitBehavior="false" />
+                                    </div>
+                                </div>                                                             
+                            </div>
+                        </div>                                                                              
                         <div class="row my-2"> 
                             <div class="col-md-12">                            
                                 <div id="divUploadError" class="alert-primary p-2 card" role="alert" runat="server">                        
@@ -147,25 +163,25 @@
                                     <table class="table table-info table-bordered rounded my-2">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col">File Name</th>
+                                                <th scope="col">Row Number</th>
                                                 <th scope="col">Error</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>ExampleFileError.dat</td>
-                                                <td>Looks like something didn't go right in this one spot right next to that other thing.</td>
+                                                <td>6</td>
+                                                <td>Incorrect date format</td>
                                             </tr>
                                             <tr>
-                                                <td>DemoFileError.dat</td>
-                                                <td>I don't know why this isn't working. Maybe it's cyber-squirrels; they're always chewing holes in our data. Yeah, cyber-squirrels...</td>
+                                                <td>10</td>
+                                                <td>Temperature out of range</td>
                                             </tr>
                                         </tbody>                                     
                                     </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
 
 
 
