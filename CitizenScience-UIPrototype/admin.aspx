@@ -65,9 +65,13 @@
                                         <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Location Watershed:</asp:Label>
                                         <asp:DropDownList CssClass="form-control" ID="ddlAddLocationWatershed" runat="server">
                                             <asp:ListItem Value="">Watershed...</asp:ListItem>
-                                            <asp:ListItem Value="w1">Watershed1</asp:ListItem>
-                                            <asp:ListItem Value="w2">Watershed2</asp:ListItem>
-                                            <asp:ListItem Value="w3">Watershed3</asp:ListItem>                                             
+                                            <asp:ListItem Value="w1">Darby & Cobbs Creeks</asp:ListItem>
+                                            <asp:ListItem Value="w2">Delaware River</asp:ListItem>
+                                            <asp:ListItem Value="w3">Lower Schuylkill River</asp:ListItem>                                             
+                                            <asp:ListItem Value="w3">Pennypack Creek</asp:ListItem>                                             
+                                            <asp:ListItem Value="w3">Poquessing Creek</asp:ListItem>                                             
+                                            <asp:ListItem Value="w3">Tacony & Frankford Creeks</asp:ListItem>                                             
+                                            <asp:ListItem Value="w3">Wissahickon Creek</asp:ListItem>                                             
                                         </asp:DropDownList>
                                     </div>
                                 </div>
@@ -93,14 +97,12 @@
                             <div class="col-md-3 offset-1 alert-primary rounded py-3 d-inline-block" id="divExistingLocations" runat="server">
                                 <h2><em>Current Locations:</em></h2>
                                 <ul class="list-group">
-                                    <li class="list-group-item">Location1</li>
-                                    <li class="list-group-item">Location2</li>
-                                    <li class="list-group-item">Location3</li>         
-                                    <li class="list-group-item">Location4</li>         
-                                    <li class="list-group-item">Location5</li>         
-                                    <li class="list-group-item">Location6</li>         
-                                    <li class="list-group-item">Location7</li>         
-                                    <li class="list-group-item">Location8</li>                                                      
+                                    <li class="list-group-item">Tacony Creek Park</li>
+                                    <li class="list-group-item">Schuylkill River Park</li>
+                                    <li class="list-group-item">Ramona Gateway</li>         
+                                    <li class="list-group-item">Whitaker Gateway</li>         
+                                    <li class="list-group-item">Cobbs Creek Park</li>         
+                                    <li class="list-group-item">Fairmount Park</li>                                                                   
                                 </ul>
                             </div>
                         </div>
@@ -130,14 +132,12 @@
                                 <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAddLocationWatershed" runat="server">Data Location:</asp:Label>
                                 <asp:DropDownList CssClass="form-control" ID="DropDownList1" runat="server">
                                     <asp:ListItem>Recorded at...</asp:ListItem>
-                                    <asp:ListItem>Location1</asp:ListItem>
-                                    <asp:ListItem>Location2</asp:ListItem>
-                                    <asp:ListItem>Location3</asp:ListItem>                                             
-                                    <asp:ListItem>Location4</asp:ListItem>                                             
-                                    <asp:ListItem>Location5</asp:ListItem>                                             
-                                    <asp:ListItem>Location6</asp:ListItem>                                             
-                                    <asp:ListItem>Location7</asp:ListItem>                                             
-                                    <asp:ListItem>Location8</asp:ListItem>                                             
+                                    <asp:ListItem>Tacony Creek Park</asp:ListItem>
+                                    <asp:ListItem>Schuylkill River Park</asp:ListItem>
+                                    <asp:ListItem>Ramona Gateway</asp:ListItem>                                             
+                                    <asp:ListItem>Whitaker Gateway</asp:ListItem>                                             
+                                    <asp:ListItem>Cobbs Creek Park</asp:ListItem>                                             
+                                    <asp:ListItem>Fairmount Park</asp:ListItem>                                                                                                                
                                 </asp:DropDownList>
                             </div>
 
@@ -203,9 +203,9 @@
                                             <th scope="col" class="w-75">
                                                 <asp:DropDownList CssClass="form-control" ID="ddlSensorDownloadWatersheds" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSensorDownloadWatersheds_Change">
                                                     <asp:ListItem Value="">All Watersheds...</asp:ListItem>
-                                                    <asp:ListItem Value="w1">Watershed1</asp:ListItem>
-                                                    <asp:ListItem Value="w2">Watershed2</asp:ListItem>
-                                                    <asp:ListItem Value="w3">Watershed3</asp:ListItem>                                             
+                                                    <asp:ListItem Value="w1">Pennypack Creek</asp:ListItem>
+                                                    <asp:ListItem Value="w2">Lower Schuylkill River</asp:ListItem>
+                                                    <asp:ListItem Value="w3">Delaware River</asp:ListItem>                                             
                                                 </asp:DropDownList>
 
                                             </th>
@@ -215,36 +215,28 @@
                                     <tbody>
                                         <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location1</td>
+                                            <td>Tacony Creek Park</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location2</td>
+                                            <td>Schuylkill River Park</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location3</td>
+                                            <td>Ramona Gateway</td>
                                         </tr>
                                          <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location4</td>
+                                            <td>Whitaker Gateway</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location5</td>
+                                            <td>Cobbs Creek Park</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location6</td>
-                                        </tr>
-                                         <tr>
-                                            <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location7</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><asp:Checkbox runat="server"/></th>
-                                            <td>Location8</td>
-                                        </tr>
+                                            <td>Fairmount Park</td>
+                                        </tr>                                       
                                         <tr>                                  
                                     </tbody>
                                 </table>
@@ -289,23 +281,11 @@
                                 <div class ="row">
                                     <div class="col-md-12">
                                         <h2>Add New Administrator:</h2>
-                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminUsername" runat="server">Username:</asp:Label>
+                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminUsername" runat="server">AccessNet ID:</asp:Label>
                                         <asp:TextBox CssClass="form-control" ID="txtNewAdminUsername" runat="server" required="true"/>
 
-                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminFirstName" runat="server">First Name:</asp:Label>
-                                        <asp:TextBox CssClass="form-control" ID="txtNewAdminFirstName" runat="server" required="true"/>
-
-                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminLastName" runat="server">Last Name:</asp:Label>
-                                        <asp:TextBox CssClass="form-control"  ID="txtNewAdminLastName" runat="server" required="true"/>
-
                                         <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminPassword" runat="server">Password:</asp:Label>
-                                        <asp:TextBox TextMode="Password" CssClass="form-control" id="txtNewAdminPassword" runat="server" required="true"/>
-
-                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminPasswordReenter" runat="server">Re-enter Password:</asp:Label>
-                                        <asp:TextBox TextMode="Password" CssClass="form-control" id="txtNewAdminPasswordReenter" runat="server" required="true"/>
-
-                                        <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewAdminEmail" runat="server">Email:</asp:Label>
-                                        <asp:TextBox CssClass="form-control" ID="txtNewAdminEmail" runat="server" required="true"/>
+                                        <asp:TextBox TextMode="Password" CssClass="form-control" id="txtNewAdminPassword" runat="server" required="true"/>                                       
 
                                         <asp:Button CssClass="btn btn-primary m-2" ID="btnCreateNewAdmin" runat="server" text="Create Admin" OnClick="HideNewAdmin" UseSubmitBehavior="false"/>
                                         <asp:Button CssClass="btn btn-secondary" ID="btnCancelNewAdmin" runat="server" text="Cancel" OnClick="HideNewAdmin" UseSubmitBehavior="false"/>   
@@ -345,38 +325,38 @@
                                             <th scope="col"></th>
                                             <th scope="col"></th>
                                         </tr>
-                                    </thead>
+                                    </thead>                                    
                                     <tr>
-                                        <td>Album1</td>
-                                        <td>This is an album with pictures</td>
-                                        <td>Volunteer</td>
-                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
-                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
-                                    </tr>
-                                    <tr>
-                                        <td>Album2</td>
+                                        <td>Cobbs Creek Park</td>
                                         <td>Another album with other pictures</td>
                                         <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
                                     <tr>
-                                        <td>Album3</td>
-                                        <td>A third album with even more pictures</td>
+                                        <td>Citizen Scientist Training Day</td>
+                                        <td>Pictures from the very first training day with our new Citizen Scientists.</td>
+                                        <td>Volunteer</td>
+                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
+                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Fairmount Park</td>
+                                        <td>Pictures taken from all around Fairmount Park.</td>
                                         <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
                                     <tr>
-                                        <td>Album4</td>
-                                        <td>This album has pictures just like the others, quality content in here</td>
+                                        <td>Tacony Creek Park</td>
+                                        <td>Pictures taken from around Tacony Creek Park.</td>
                                         <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
                                     </tr>
                                     <tr>
-                                        <td>Album5</td>
-                                        <td>This is the last album included here, but hopefully there will be more to come</td>
+                                        <td>Summer 2019 Citizen Scientists</td>
+                                        <td>Pictures from the end of summer 2019 Grand Data Harvest</td>
                                         <td>Volunteer</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 

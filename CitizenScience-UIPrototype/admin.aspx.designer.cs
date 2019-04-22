@@ -292,24 +292,6 @@ namespace CitizenScience_UIPrototype {
         protected global::System.Web.UI.WebControls.TextBox txtNewAdminUsername;
         
         /// <summary>
-        /// txtNewAdminFirstName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewAdminFirstName;
-        
-        /// <summary>
-        /// txtNewAdminLastName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewAdminLastName;
-        
-        /// <summary>
         /// txtNewAdminPassword control.
         /// </summary>
         /// <remarks>
@@ -317,24 +299,6 @@ namespace CitizenScience_UIPrototype {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNewAdminPassword;
-        
-        /// <summary>
-        /// txtNewAdminPasswordReenter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewAdminPasswordReenter;
-        
-        /// <summary>
-        /// txtNewAdminEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNewAdminEmail;
         
         /// <summary>
         /// btnCreateNewAdmin control.
