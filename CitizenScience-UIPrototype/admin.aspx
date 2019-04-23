@@ -245,7 +245,6 @@
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
                                             <td>Location8</td>
                                         </tr>
-                                        <tr>                                  
                                     </tbody>
                                 </table>
                             </div>
