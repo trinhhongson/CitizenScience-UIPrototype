@@ -23,16 +23,16 @@
           <div class="modal-body">
             <div class="slideshow-container">
               <div class="mySlides1">
-                <img src="img/watershed/water1.jpeg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Watershed/Watershed01.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
+                <p style="font-family:Garamond; text-align:center;">A river in this watershed location</p>
               </div>
               <div class="mySlides1">
-                <img src="img/watershed/water2.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Watershed/Watershed02.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
+                <p style="font-family:Garamond; text-align:center;">A dam in this watershed location</p>
               </div>
               <div class="mySlides1">
-                <img src="img/watershed/water3.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;" />
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Watershed/Watershed03.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;" />
+                <p style="font-family:Garamond; text-align:center;">Mountains in this watershed location</p>
               </div>
               <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
@@ -57,16 +57,16 @@
           <div class="modal-body">
             <div class="slideshow-container">
               <div class="mySlides2">
-                <img src="img/volunteer/person1.png" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Volunteer/Volunteer01.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
+                <p style="font-family:Garamond; text-align:center;">Volunteer in the river of the watershed</p>
               </div>
               <div class="mySlides2">
-                <img src="img/volunteer/person2.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Volunteer/Volunteer02.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
+                <p style="font-family:Garamond; text-align:center;">Volunteers in the dam of the watershed</p>
               </div>
               <div class="mySlides2">
-                <img src="img/volunteer/person3.gif" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
-                <p style="font-family:Garamond; text-align:center;">Here can be a short description about this photo</p>
+                <img src="img/Volunteer/Volunteer03.jpg" style="width:100%; display:block; margin-left:auto; margin-right:auto;">
+                <p style="font-family:Garamond; text-align:center;">Volunteers caught a fish in the watershed</p>
               </div>
               <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
@@ -82,7 +82,7 @@
       <section class="jumbotron text-center" >
         <div class="container">
           <h1 class="jumbotron-heading">Photo Gallery</h1>
-          <p class="lead text-muted">Here will be a short description about this photo gallery</p>
+          <p class="lead text-muted">Here is a photo gallery that shows the pirctures of various watershed locations and volunteer events</p>
           <p>
             <a href="#" class="btn btn-primary my-2" onclick="myFunction3()">Show All</a>
             <a href="#" class="btn btn-primary my-2" onclick="myFunction()">Locations</a>
@@ -94,43 +94,43 @@
       <div id="myDIV" style="width:90%; margin:auto;">
         <div class="album py-5 bg-light" style="background-color: #C1EEFE;"> 
             <div class="container">
-              <h2 style="font-size:30px; font-family:Garamond; color:dodgerblue;">Watersheds</h2><hr /><br />
+              <h2 style="font-size:30px; font-family:Garamond; color:dodgerblue;">Locations</h2><hr /><br />
               <div class="row">
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed0.png" alt="Watershed"> 
-                    <div class="card-body">Watersheds 1</p>
+                    <img src="img/Watershed/Watershed1.jpg" alt="Watershed"> 
+                    <div class="card-body">Darby-Cobbs Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed1.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 2</p>
+                    <img src="img/Watershed/Watershed2.jpg" alt="Watershed"> 
+                    <div class="card-body">Delaware Direct Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed2.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 3</p>
+                    <img src="img/Watershed/Watershed3.jpg" alt="Watershed"> 
+                    <div class="card-body">Lower Schuylkill River Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
@@ -138,39 +138,39 @@
 
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed3.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 4</p>
+                    <img src="img/Watershed/Watershed4.jpg" alt="Watershed"> 
+                    <div class="card-body">Pennypack Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed4.jpg" alt="Watershed"> 
-                    <div class="card-body">Watersheds 5</p>
+                    <img src="img/Watershed/Watershed5.jpg" alt="Watershed"> 
+                    <div class="card-body">Poquessing Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Watershed5.jpg" alt="Watershed">  
-                    <div class="card-body">Watersheds 6</p>
+                    <img src="img/Watershed/Watershed6.jpg" alt="Watershed">  
+                    <div class="card-body">Wissahickon Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
@@ -187,39 +187,39 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer.gif" alt="Volunteer">   
-                    <div class="card-body">Volunteer 1</p>
+                    <img src="img/Volunteer/Volunteer1.jpg" alt="Volunteer">   
+                    <div class="card-body">Volunteer in Darby-Cobbs Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer1.gif" alt="Volunteer">   
-                    <div class="card-body">Volunteer 2</p>
+                    <img src="img/Volunteer/Volunteer2.jpg" alt="Volunteer">   
+                    <div class="card-body">Volunteers in Delaware Direct Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer2.gif" alt="Volunteer">   
-                    <div class="card-body">Volunteer 3</p>
+                    <img src="img/Volunteer/Volunteer3.jpg" alt="Volunteer">   
+                    <div class="card-body">Volunteers in Lower Schuylkill River Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
@@ -227,39 +227,39 @@
 
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                      <img src="img/volunteers3.jpg" alt="Volunteer">                       
-                      <div class="card-body">Volunteer 4</p>
+                      <img src="img/Volunteer/Volunteer4.jpg" alt="Volunteer">                       
+                      <div class="card-body">Volunteers in Pennypack Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                      <img src="img/volunteer4.gif" alt="Volunteer">                    
-                      <div class="card-body">Volunteer 5</p>
+                      <img src="img/Volunteer/Volunteer4.jpg" alt="Volunteer">                    
+                      <div class="card-body">Volunteers in Poquessing Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card mb-4 box-shadow">
-                    <img src="img/Volunteer5.gif" alt="Volunteer">   
-                    <div class="card-body">Volunteer 6</p>
+                    <img src="img/Volunteer/Volunteer4.jpg" alt="Volunteer">   
+                    <div class="card-body">Volunteers in Wissahickon Creek Watershed</p>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter2">View</button>
                         </div>
-                        <small class="text-muted"># of pics</small>
+                        <small class="text-muted">3</small>
                       </div>
                     </div>
                   </div>
