@@ -14,11 +14,13 @@ namespace CitizenScience_UIPrototype
             if (!IsPostBack)
             {
                 divAddLocation.Visible = false;
+                divAddWatershed.Visible = false;
                 divUploadSensorData.Visible = false;
                 divDownloadSensorData.Visible = false;
                 divManageAdmins.Visible = false;
                 divEditGallery.Visible = false;
                 divEditAbout.Visible = false;
+                divVolunteers.Visible = false;
                 divAdminPrompt.Visible = true;
             }
         }
@@ -33,66 +35,98 @@ namespace CitizenScience_UIPrototype
                 case "location":
                     lblPanelTitle.Text = "New Location:";
                     divAddLocation.Visible = true;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
+                    break;
+                case "watershed":
+                    lblPanelTitle.Text = "New Watershed:";
+                    divAddLocation.Visible = false;
+                    divAddWatershed.Visible = true;
+                    divUploadSensorData.Visible = false;
+                    divDownloadSensorData.Visible = false;
+                    divManageAdmins.Visible = false;
+                    divEditGallery.Visible = false;
+                    divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
                     break;
                 case "upload":
                     lblPanelTitle.Text = "Upload Sensor Data:";
                     divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = true;
                     divDownloadSensorData.Visible = false;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
 
                     divUploadError.Visible = false;
                     break;
                 case "download":
                     lblPanelTitle.Text = "Download Sensor Data:";
                     divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = true;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
                     break;
                 case "admins":
-                    lblPanelTitle.Text = "Manage Admins:";
+                    lblPanelTitle.Text = "Manage Administrators:";
                     divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
                     divManageAdmins.Visible = true;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
 
                     divNewAdmin.Visible = false;
                     break;
                 case "gallery":
                     lblPanelTitle.Text = "Manage Gallery:";
                     divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = true;
                     divEditAbout.Visible = false;
+                    divVolunteers.Visible = false;
 
                     divEditAlbum.Visible = false;
                     divAddNewAlbum.Visible = false;
+                    ddlAlbumLocation.Visible = false;
                     break;
                 case "about":
                     lblPanelTitle.Text = "Manage About:";
                     divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
                     divUploadSensorData.Visible = false;
                     divDownloadSensorData.Visible = false;
                     divManageAdmins.Visible = false;
                     divEditGallery.Visible = false;
                     divEditAbout.Visible = true;
-
-                    divEditAboutSection.Visible = false;
-                    //divAddAboutSection.Visible = false;
+                    divVolunteers.Visible = false;
+                    break;
+                case "volunteer":
+                    lblPanelTitle.Text = "Volunteer Form Submissions:";
+                    divAddLocation.Visible = false;
+                    divAddWatershed.Visible = false;
+                    divUploadSensorData.Visible = false;
+                    divDownloadSensorData.Visible = false;
+                    divManageAdmins.Visible = false;
+                    divEditGallery.Visible = false;
+                    divEditAbout.Visible = false;
+                    divVolunteers.Visible = true;
                     break;
             }
         }
@@ -154,27 +188,13 @@ namespace CitizenScience_UIPrototype
         {
             divEditAlbum.Visible = false;
         }
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////      MANAGE ABOUT FUNCTIONS   
-        ///
-        protected void btnAddAboutSection_Click(object sender, EventArgs e)
-        {
-            //divAddAboutSection.Visible = true;
-            divEditAboutSection.Visible = false;
-        }
-        protected void btnEditAboutSection_Click(object sender, EventArgs e)
-        {
-            //divAddAboutSection.Visible = false;
-            divEditAboutSection.Visible = true;
-        }
-        protected void HideEditAboutSection(object sender, EventArgs e)
-        {
-            divEditAboutSection.Visible = false;
-        }
-        protected void HideAddAboutSection(object sender, EventArgs e)
-        {
-            //divAddAboutSection.Visible = false;
+        protected void ddlNewAlbumGroup_Change(object sender, EventArgs e)
+        {        
+            string type = ddlNewAlbumGroup.SelectedValue;
+            if (type == "location")
+                ddlAlbumLocation.Visible = true;
+            else
+                ddlAlbumLocation.Visible = false;
         }
     }
 }
