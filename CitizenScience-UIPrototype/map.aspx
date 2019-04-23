@@ -118,7 +118,8 @@
             var contentString_ambler = '<img src="img/Watershed/Watershed4.jpg" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
                 + '<h3>Pennypack Creek</h3>'
                 + '<p>Pennypack Creek rises from headwater springs and wetlands</p>'
-                + '<p>in the suburbs of Horsham, Warminster, and Upper Southampton.</p>';
+                + '<p>in the suburbs of Horsham, Warminster, and Upper Southampton.</p>'
+                + '<a href="#" data-toggle="modal" data-target="#locationModal">more details >></a>';
 
             var infowindow_ambler = new google.maps.InfoWindow({
                 content: contentString_ambler
@@ -138,7 +139,8 @@
             var contentString_center = '<img src="img/Watershed/Watershed5.jpg" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
                 + '<h3>Poquessing Creek</h3>'
                 + '<p>The Poquessing Creek Watershed rises from tributary streams</p>'
-                + '<p>in Lower Moreland and Lower Southampton Townships.</p>';
+                + '<p>in Lower Moreland and Lower Southampton Townships.</p>'
+                + '<a href="#" data-toggle="modal" data-target="#locationModal">more details >></a>';
 
             var infowindow_center = new google.maps.InfoWindow({
                 content: contentString_center
