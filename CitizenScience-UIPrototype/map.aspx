@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="main_content" runat="server">
     <!--Header-->
     <div style="text-align: center;">
-        <h1><u>Welcome to Citizen Science</u></h1>
+        <h1>Welcome to Citizen Science</h1>
         <p>Hover on a location on the map or select a watershed location from the list to see more details</p>
     </div>
     <!--Location Dropdown-->
