@@ -11,13 +11,13 @@
             <div class="col-md-2" id="divAdminAction">
                 <div class="btn-group-vertical my-3" id="divPanelButtons" runat="server">
                     <asp:LinkButton OnClick="Navigate" CustomParameter="location" Text="Add Location" CssClass="btn btn-primary py-4 mt-1" runat="server" />
+                    <asp:LinkButton OnClick="Navigate" CustomParameter="watershed" Text="Add Watershed" CssClass="btn btn-primary py-4 mt-1" runat="server" />
                     <asp:LinkButton OnClick="Navigate" CustomParameter="upload" Text="Upload Sensor Data" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                     <asp:LinkButton OnClick="Navigate" CustomParameter="download" Text="Download Sensor Data" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                     <asp:LinkButton OnClick="Navigate" CustomParameter="admins" Text="Manage Administrators" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                     <asp:LinkButton OnClick="Navigate" CustomParameter="gallery" Text="Edit Gallery" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
-                    <%--
                     <asp:LinkButton OnClick="Navigate" CustomParameter="about" Text="Edit About" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
-                    --%>
+                    <asp:LinkButton OnClick="Navigate" CustomParameter="volunteer" Text="Volunteer Form Submissions" CssClass="btn btn-primary py-4 mt-1" runat="server"/>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
                             </div>    
                         
                             <%-- CURRENTLY-REGISTERED-LOCATIONS FORM --%>
-                            <div class="col-md-3 offset-1 alert-primary rounded py-3 d-inline-block" id="divExistingLocations" runat="server">
+                            <div class="col-md-3 offset-1 alert-primary rounded py-3 d-inline-block" id="divExistingLocations" runat="server" style="overflow-y:scroll">
                                 <h2><em>Current Locations:</em></h2>
                                 <ul class="list-group">
                                     <li class="list-group-item">Tacony Creek Park</li>
@@ -103,6 +103,36 @@
                                     <li class="list-group-item">Whitaker Gateway</li>         
                                     <li class="list-group-item">Cobbs Creek Park</li>         
                                     <li class="list-group-item">Fairmount Park</li>                                                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+    <%-- ADD WATERSHED PANEL --%>    
+                    <div class="col-md-12" id="divAddWatershed" runat="server">
+                        <div class="row">
+                            <%-- NEW WATERSHED SECTION --%>    
+                            <div class="col-md-6">                        
+                                <div class="row my-3">
+                                    <span style="color:red">*</span><asp:Label AssociatedControlID="txtNewWatershedName" runat="server">New Watershed Name:</asp:Label>
+                                    <asp:TextBox CssClass="form-control" ID="txtNewWatershedName" runat="server" required="true" />
+                                </div>
+                                <%-- ADD WATERSHED BUTTON --%>        
+                                <div class="row"><asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" text="Add Watershed" OnClick="btnAddLocation_Click" UseSubmitBehavior="false" /></div> 
+                            </div>
+                            <%-- CURRENTLY-REGISTERED-WATERSHED FORM --%>
+                            <div class="col-md-3 offset-1 alert-primary rounded py-3 d-inline-block" id="div3" runat="server" style="overflow-y:scroll">
+                                <h2><em>Current Watersheds:</em></h2>
+                                <ul class="list-group">
+                                    <li class="list-group-item">Darby & Cobbs Creeks</li>
+                                    <li class="list-group-item">Delaware River</li>
+                                    <li class="list-group-item">Lower Schuylkill River</li>         
+                                    <li class="list-group-item">Pennypack Creek</li>         
+                                    <li class="list-group-item">Poquessing Creek</li>         
+                                    <li class="list-group-item">Tacony & Frankford Creeks</li>    
+                                    <li class="list-group-item">Wissahickon Creek</li>                                      
                                 </ul>
                             </div>
                         </div>
@@ -328,7 +358,7 @@
                                     </thead>                                    
                                     <tr>
                                         <td>Cobbs Creek Park</td>
-                                        <td>Another album with other pictures</td>
+                                        <td>Pictures taken at Cobbs Creek Park</td>
                                         <td>Location</td>
                                         <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAlbum_Click" UseSubmitBehavior="false"/></td>
                                         <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td> 
@@ -374,10 +404,18 @@
                                 <asp:TextBox TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtAlbumDescription" runat="server"/>
 
                                 <span style="color:red">*</span><asp:Label AssociatedControlID="ddlNewAlbumGroup" runat="server">Album Category:</asp:Label>
-                                <asp:DropDownList CssClass="form-control" ID="ddlNewAlbumGroup" runat="server">
+                                <asp:DropDownList CssClass="form-control" ID="ddlNewAlbumGroup" runat="server" OnSelectedIndexChanged="ddlNewAlbumGroup_Change" AutoPostBack="true">
                                     <asp:ListItem>Category...</asp:ListItem>
-                                    <asp:ListItem>Location</asp:ListItem>
+                                    <asp:ListItem Value="location">Location</asp:ListItem>
                                     <asp:ListItem>Volunteer</asp:ListItem>
+                                </asp:DropDownList>
+
+                                <span style="color:red">*</span><asp:Label AssociatedControlID="ddlAlbumLocation" runat="server">Album Location:</asp:Label>
+                                <asp:DropDownList CssClass="form-control" ID="ddlAlbumLocation" runat="server">
+                                    <asp:ListItem>Location...</asp:ListItem>
+                                    <asp:ListItem>Schuylkill River Park</asp:ListItem>
+                                    <asp:ListItem>Ramona Gateway</asp:ListItem>
+                                    <asp:ListItem>Whitaker Gateway</asp:ListItem>
                                 </asp:DropDownList>
 
                                 <asp:Button CssClass="btn btn-primary m-2" ID="btnCreateAlbum" runat="server" text="Create Album" UseSubmitBehavior="false" OnClick="btnCreateAlbum_Click" />
@@ -391,7 +429,7 @@
                                         <asp:Button CssClass="btn btn-secondary mr-5" ID="btnCloseEditGallery" runat="server" text="Back to Gallery" OnClick="btnCloseEditGallery_Click" UseSubmitBehavior="false"/>
                                     </div>
                                 </div> 
-                                <h2>Edit Album1:</h2>                                                               
+                                <h2>Cobbs Creek Park:</h2>                                                               
                                 <div class="row my-2">
                                     <div class="col-md-12">
                                         <asp:Label AssociatedControlID="fulUpload" CssClass="w-75" runat="server">Add New Image:</asp:Label>
@@ -438,7 +476,7 @@
                                     </div>
                                     <div class="col-md-6">                                                                                       
                                         <asp:CheckBox runat="server" />
-                                        <img src="https://cdn.pixabay.com/photo/2017/08/07/02/00/stream-2598633_960_720.jpg" height="200" width="200"/>                                               
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/CobbCreek.JPG" height="200" width="200"/>                                               
                                     </div>
                                 </div>                                
                             </div>
@@ -447,81 +485,106 @@
 
                     <%-- EDIT ABOUT PANEL --%>
                     <div class="col-md-12" id="divEditAbout" runat="server">
-                        <div class="row my-2">
-
-                            <%-- MAIN EDIT ABOUT SECTION --%>
-                            <div class="col-md-4">
-                                <%--
-                                <asp:Button CssClass="btn btn-primary my-1" ID="btnAddAboutSection" runat="server" text="+ Add New Section" OnClick="btnAddAboutSection_Click" UseSubmitBehavior="false"/>
-                                --%>
-                                <table class="table table-primary">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">Section Name</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                     <tr>
-                                        <td>About Citizen Science</td>
-                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
-                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>                        
-                                    </tr>
-                                    <tr>
-                                        <td>Common Questions</td>
-                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
-                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
-                                    </tr>
-                                    <tr>
-                                        <td>Volunteer Form</td>
-                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
-                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
-                                    </tr>
-                                    <tr>
-                                        <td>Program Lead</td>
-                                        <td><asp:Button CssClass="btn btn-secondary" runat="server" text="Edit" OnClick="btnEditAboutSection_Click" UseSubmitBehavior="false"/></td>
-                                        <td><asp:Button CssClass="btn btn-danger" runat="server" text="Delete"/></td>  
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <%-- 
-                            <%-- ADD ABOUT SECTION --%
-                            <div id="divAddAboutSection" class="col-md-6 offset-1" runat="server">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h2>Add New About Section:</h2>
-                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
-                                        <asp:TextBox CssClass="form-control" ID="txtAboutSectionName" runat="server"/>
-
-                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
-                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="txtAboutSectionContent" runat="server"/>
-
-                                        <asp:Button CssClass="btn btn-primary m-2" ID="btnConfirmAboutSectionAdd" runat="server" text="Add Section" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
-                                        <asp:Button CssClass="btn btn-secondary" ID="btnCancelAboutSectionAdd" runat="server" text="Cancel" OnClick="HideAddAboutSection" UseSubmitBehavior="false"/>
-                                    </div>
-                                </div>
-                            </div>
-                            --%>
-
+                        <div class="row my-2">               
                             <%-- EDIT ABOUT SECTION --%>
-                            <div id="divEditAboutSection" class="col-md-6 offset-1" runat="server">
+                            <div id="divEditAboutSection" class="col-md-8" runat="server">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h2>Edit About Section:</h2>
-                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Name:</asp:Label>
-                                        <asp:TextBox CssClass="form-control" ID="txtEditSectionName" runat="server" placeholder="About Citizen Science"/>
+                                        <h2>About Citizen Science:</h2>
+                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="txtEditAboutCitizenScience" runat="server" text="Citizen Science Data System (CS) is a project headed by Dr. Laura Toran and Dr. Sarah Beganskas who both work in the Earth and Environmental Science department in the College of Science and Technology. They are planning to develop an initiative which tasks volunteers with measuring temperature of water in watersheds located in the Greater Philadelphia and surrounding areas. With the CS Data System, they intend to engage the volunteers that travel to watersheds and provide accurate data reporting of the measured water temperature. The project will help visualize the data collected and allow for users that visit the application to view the various metrics. "/>
 
-                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Section Contents:</asp:Label>
-                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="txtEditSectionInformation" runat="server" placeholder="The contents of the 'About Citizen Science' section of the About page"/>
+                                        <h2>Common Questions:</h2>
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Question 1:</asp:Label>
+                                        <asp:TextBox CssClass="form-control" ID="txtEditSectionName" runat="server" text="Who are we?"/>
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Answer 1:</asp:Label>
+                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="txtEditSectionInformation" runat="server" text="Citizen Science Data System (CS) is a project headed by Dr. Laura Toran and Dr. Sarah Beganskas who both work in the Earth and Environmental Science department in the College of Science and Technology. They are planning to develop an initiative which tasks volunteers with measuring temperature of water in watersheds located in the Greater Philadelphia and surrounding areas. With the CS Data System, they intend to engage the volunteers that travel to watersheds and provide accurate data reporting of the measured water temperature. The project will help visualize the data collected and allow for users that visit the application to view the various metrics."/>
 
-                                        <asp:Button CssClass="btn btn-primary m-2" ID="btnUpdateAboutSection" runat="server" text="Update Section" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
-                                        <asp:Button CssClass="btn btn-secondary" ID="btnCancelUpdateAboutSection" runat="server" text="Cancel Updates" OnClick="HideEditAboutSection" UseSubmitBehavior="false"/>
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Question 2:</asp:Label>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" text="What are our goals?"/>
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Answer 2:</asp:Label>
+                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="TextBox2" runat="server" text="The Citizen Science Data System will record water temperature information and organize it by location. This data will be displayed in the form of interactive graphs that can be accessed from a map-view user interface. This project will serve to monitor local water source statistics while also engaging the community by allowing them to be actively involved in the collection and analysis of the data. "/>
+
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Question 3:</asp:Label>
+                                        <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" text="Expected Benefits"/>
+                                        <asp:Label AssociatedControlID="txtEditSectionName" runat="server">Answer 3:</asp:Label>
+                                        <asp:TextBox TextMode="MultiLine" Rows="6" CssClass="form-control" ID="TextBox4" runat="server" text="The main benefits to be gained through this new system will be a secure and organized data storage method for vital water temperature data as well as a way of involving Greater Philadelphia area residents in the conservation of local water ecosystems. The system will be designed to allow administrative users to easily record relevant data. That collected data will then be displayed in an intuitive and user-friendly manner."/>
+
+                                        <h2>Program Leads:</h2>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h5>Dr.Laura Toran</h5>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <asp:CheckBox runat="server" Checked="true"/>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h5>Dr.Sarah Beganskas</h5>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <asp:CheckBox runat="server" Checked="true"/>
+                                            </div>
+                                        </div>
+
+                                        <asp:Button CssClass="btn btn-primary m-2" ID="btnUpdateAboutSection" runat="server" text="Apply Changes" UseSubmitBehavior="false"/>
+                                        <asp:Button CssClass="btn btn-secondary" ID="btnCancelUpdateAboutSection" runat="server" text="Cancel" UseSubmitBehavior="false"/>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
+                     <%-- VOLUNTEER FORM SUBMISSIONS PANEL --%>    
+                    <div class="col-md-12" id="divVolunteers" runat="server">
+                        <div class="row pt-3">
+                            <div class="col-md-3">
+                                <asp:Button CssClass="btn btn-primary" ID="Button2" runat="server" text="Download All Submissions" />
+                            </div>
+                            <div class="col-md-3">
+                                <asp:Button CssClass="btn btn-primary" ID="Button3" runat="server" text="Download Selected Submissions" />
+                            </div>
+                        </div>
+                        <div class="row  pt-1">
+                            <div class="col-md-6">
+                                <table class="table table-primary rounded w-75">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">First Name</th>
+                                            <th scope="col">Last Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Message</th>
+                                        </tr>                                       
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><asp:Checkbox runat="server"/></th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>totallyrealemail@fake.com</td>
+                                            <td>
+                                                <asp:TextBox TextMode="MultiLine" runat="server" Text="How can I get involved? Do you have scheduled meetings or is it a more free-reign type of situation? I'd love to hear more!"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><asp:Checkbox runat="server"/></th>
+                                            <td>Mary</td>
+                                            <td>Susan</td>
+                                            <td>anotherrealemail@fake.com</td>
+                                            <td>
+                                                <asp:TextBox TextMode="MultiLine" runat="server" Text="Your website is so awesome, Who made it?!"/>
+                                            </td>
+                                        </tr>                                                              
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>                               
             </div>
         </div>
