@@ -15,24 +15,24 @@
                 Select Watershed
             </button>
             <ul class="dropdown-menu">
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 1</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">North Watershed</a>
                     <ul>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#locationModal">Location 1</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 2</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 3</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#locationModal">Tacony Creek Park</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Pennypack Creek</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Poquessing Creek</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 2</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">South Watershed</a>
                     <ul>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 4</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 5</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Schuylkill River Park</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Ramona Gateway</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Watershed 3</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">West Philly Watershed</a>
                     <ul>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 6</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 7</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#">Location 8</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Whitaker Gateway</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Cobbs Creek Park</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="#">Fairmount Park</a></li>
                     </ul>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="location">Location 1</h5>
+                            <h5 class="modal-title" id="location">Tacony Creek Park</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -50,20 +50,20 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="img/watershed.png" alt="bell-tower" style="width: 400px; height: 333px;" /><br />
+                                        <img src="img/Watershed/Watershed1.jpg" alt="bell-tower" style="width: 400px; height: 333px;" /><br />
                                         <a href="gallery.aspx">more pictures >></a>
-                                        <p>Some description some description some description some description</p>
+                                        <p>On 302 acres, this narrow preserve offers creek views plus native trees & wildflowers.</p>
                                     </div>
                                     <div class="col-md-1"></div>
                                     <div class="col-md-7 ml-auto">
-                                        <img src="img/graph.png" alt="graph" /><br />
+                                        <img src="img/graph.png" alt="graph" style="width: 570px; height: 340px;"/><br />
                                         <br />
                                         <label>From:</label>
                                         <input type="date"/>
                                         <label>To:</label>
                                         <input type="date"/>
                                         <button>Reset</button>
-                                        <br /><input type="radio" name="temperature" /> Celsius
+                                        <br /><input type="radio" name="temperature" checked="checked"/> Celsius
                                         <br /><input type="radio" name="temperature" /> Fahrenheit
                                     </div>
                                 </div>
@@ -83,20 +83,21 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 39.9926, lng: -75.1652 },
+                center: { lat: 40.0319, lng: -75.1134 },
                 zoom: 11
             });
 
             //Temple Main Campus
             var marker_main = new google.maps.Marker({
-                position: { lat: 39.9816, lng: -75.1495 },
+                position: { lat: 40.0319, lng: -75.1134 },
                 map: map,
-                title: 'Temple Main'
+                title: 'Tacony Creek Park'
             });
 
-            var contentString_main = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
-                + '<h3>Location 1</h3>'
-                + '<p>Watershed Location 1 Description Description </p>'
+            var contentString_main = '<img src="img/Watershed/Watershed1.jpg" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Tacony Creek Park</h3>'
+                + '<p>On 302 acres, this narrow preserve offers </p>'
+                + '<p>creek views plus native trees & wildflowers.</p>'
                 + '<a href="#" data-toggle="modal" data-target="#locationModal">more details >></a>';
 
             var infowindow_main = new google.maps.InfoWindow({
@@ -109,14 +110,15 @@
 
             //Temple Ambler Campus
             var marker_ambler = new google.maps.Marker({
-                position: { lat: 40.1664, lng: -75.1937 },
+                position: { lat: 40.0831, lng: -75.0585 },
                 map: map,
-                title: 'Temple Ambler'
+                title: 'Pennypack Creek'
             });
 
-            var contentString_ambler = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
-                + '<h3>Location 2</h3>'
-                + '<p>AMBLER Description Description </p>';
+            var contentString_ambler = '<img src="img/Watershed/Watershed4.jpg" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Pennypack Creek</h3>'
+                + '<p>Pennypack Creek rises from headwater springs and wetlands</p>'
+                + '<p>in the suburbs of Horsham, Warminster, and Upper Southampton.</p>';
 
             var infowindow_ambler = new google.maps.InfoWindow({
                 content: contentString_ambler
@@ -128,14 +130,15 @@
 
             //Temple Center City
             var marker_center = new google.maps.Marker({
-                position: { lat: 39.9532, lng: -75.1661 },
+                position: { lat: 40.099253, lng: -75.01150 },
                 map: map,
-                title: 'Temple Center'
+                title: 'Poquessing Creek'
             });
 
-            var contentString_center = '<img src="img/watershed.png" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
-                + '<h3>Location 3</h3>'
-                + '<p>CENTER CITY Description Description </p>';
+            var contentString_center = '<img src="img/Watershed/Watershed5.jpg" alt="Temple_Univeristy" style="width: 300px; height: 250px;"><br /><br />'
+                + '<h3>Poquessing Creek</h3>'
+                + '<p>The Poquessing Creek Watershed rises from tributary streams</p>'
+                + '<p>in Lower Moreland and Lower Southampton Townships.</p>';
 
             var infowindow_center = new google.maps.InfoWindow({
                 content: contentString_center
