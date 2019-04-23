@@ -267,7 +267,6 @@
                                             <th scope="row"><asp:Checkbox runat="server"/></th>
                                             <td>Fairmount Park</td>
                                         </tr>                                       
-                                        <tr>                                  
                                     </tbody>
                                 </table>
                             </div>
