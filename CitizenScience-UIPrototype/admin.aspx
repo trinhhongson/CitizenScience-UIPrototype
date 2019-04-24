@@ -195,16 +195,19 @@
                                             <tr>
                                                 <th scope="col">Row Number</th>
                                                 <th scope="col">Error</th>
+                                                <th scope="col">Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>6</td>
                                                 <td>Incorrect date format</td>
+                                                <td>4/18/2019</td>
                                             </tr>
                                             <tr>
                                                 <td>10</td>
                                                 <td>Temperature out of range</td>
+                                                <td>4/24/2019</td>
                                             </tr>
                                         </tbody>                                     
                                     </table>
