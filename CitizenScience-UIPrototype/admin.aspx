@@ -510,19 +510,37 @@
 
                                         <h2>Program Leads:</h2>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <h5>Dr.Laura Toran</h5>
-                                            </div>
                                             <div class="col-md-1">
                                                 <asp:CheckBox runat="server" Checked="true"/>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>Dr.Laura Toran</h5>
+                                            </div> 
+                                            <div class="col-md-7">
+                                                <span style="color:red">*</span><asp:Label AssociatedControlID="fulNewImg" CssClass="w-75" runat="server">Profile Image:</asp:Label>
+                                                <div class="input-group w-50" id="Div2" runat="server">            
+                                                    <div class="custom-file">
+                                                        <asp:Label AssociatedControlID="fulNewLocationImage" CssClass="custom-file-label" runat="server">Choose image...</asp:Label>
+                                                        <asp:FileUpload ID="FileUpload1" CssClass="custom-file-input" runat="server" required="true"/>                              
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <h5>Dr.Sarah Beganskas</h5>
-                                            </div>
                                             <div class="col-md-1">
                                                 <asp:CheckBox runat="server" Checked="true"/>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>Dr.Sarah Beganskas</h5>
+                                            </div>  
+                                            <div class="col-md-7">
+                                                <span style="color:red">*</span><asp:Label AssociatedControlID="fulNewImg" CssClass="w-75" runat="server">Profile Image:</asp:Label>
+                                                <div class="input-group w-50" id="Div4" runat="server">            
+                                                    <div class="custom-file">
+                                                        <asp:Label AssociatedControlID="fulNewLocationImage" CssClass="custom-file-label" runat="server">Choose image...</asp:Label>
+                                                        <asp:FileUpload ID="FileUpload2" CssClass="custom-file-input" runat="server" required="true"/>                              
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -548,13 +566,14 @@
                         </div>
                         <div class="row  pt-1">
                             <div class="col-md-6">
-                                <table class="table table-primary rounded w-75">
+                                <table class="table table-primary rounded">
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col"></th>
                                             <th scope="col">First Name</th>
                                             <th scope="col">Last Name</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">Date Submitted</th>
                                             <th scope="col">Message</th>
                                         </tr>                                       
                                     </thead>
@@ -564,6 +583,7 @@
                                             <td>John</td>
                                             <td>Doe</td>
                                             <td>totallyrealemail@fake.com</td>
+                                            <td>4/22/2019</td>
                                             <td>
                                                 <asp:TextBox TextMode="MultiLine" runat="server" Text="How can I get involved? Do you have scheduled meetings or is it a more free-reign type of situation? I'd love to hear more!"/>
                                             </td>
@@ -573,6 +593,7 @@
                                             <td>Mary</td>
                                             <td>Susan</td>
                                             <td>anotherrealemail@fake.com</td>
+                                            <td>4/23/2019</td>
                                             <td>
                                                 <asp:TextBox TextMode="MultiLine" runat="server" Text="Your website is so awesome, Who made it?!"/>
                                             </td>
